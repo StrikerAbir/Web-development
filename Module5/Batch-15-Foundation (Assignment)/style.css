@@ -1,0 +1,314 @@
+body {
+    margin:0;
+    font-family: 'Inter', sans-serif;
+}
+p {
+    font-size:18px;
+}
+/* Section 1 css part*/
+.section1 {
+    display: flex;
+    height: 670px;
+    color: white;
+}
+.background-img {
+    background-image: url(images/donation5.jpg);
+    background-size: cover;
+}
+.sec1-div1 {
+    display: flex;
+    background: linear-gradient(#121212,#12121200 10%,#12121200 0%,#121212);
+}
+.sec1-div2 {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+.sec1-head1Font {
+    font-size:65px;
+    font-weight:700
+}
+.sec1-head2Font {
+    font-size: 30px;
+    font-weight: 700
+}
+.color-text {
+    color: rgb(210, 219, 78);
+}
+.sec1-div2 p{
+    padding-bottom: 50px;
+}
+.donate-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 16px;
+    background-color: rgb(168, 177, 42);
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Section 2 css part*/
+.section2{
+    height: 680px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 3%;
+}
+.sec2-font-color{
+    color: #707070;
+}
+.sec2-div1 {
+    text-align: center;
+}
+.sec2-div1 h1 {
+    font-size: 45px;
+    font-weight:700;
+    padding-top:60px;
+}
+.sec2-div1-innerdiv1 {
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+.qoute {
+    margin: 0;
+}
+.saw {
+    font-style:italic;
+}
+.taka {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 42px;
+}
+.taka-box {
+    margin: auto;
+    height: 123px;
+    width: 135px;
+    background-color: #f8f6f6;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px #757070;
+}
+
+.color-box {
+    background-color: rgb(236, 238, 212);
+    border: 2px solid rgb(168, 177, 42);
+    border-radius: 5px;
+    color: rgb(168, 177, 42);
+}
+.sec2-div2 {
+    display:flex;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    
+}
+.sec2-div3 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+input[type="text"] {
+    width: 100%;
+    color: #B3B3B3;
+    border: none;
+    border-bottom: 2px solid #B3B3B3;
+    margin-bottom: 1%;
+    height: 60px;
+    text-align: center;
+    font-size: 18px;
+}
+input:focus {
+    outline: none;
+}
+input[type="text"]::placeholder {
+    text-align: center;
+    color: #B3B3B3;
+    font-size: 18px;
+}
+.sec2-div3 hr {
+   border: 2px solid white; 
+   background-color: #DADADA;
+}
+
+/* Section 3 css part*/
+.section3 {
+    height: 680px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 6%;
+}
+.sec3-div1.innerdiv1 {
+    padding-left: 14%;
+    padding-right: 14%;
+}
+
+.sec3-div1-innerdiv1 {
+    padding-left: 14%;
+    padding-right: 14%;
+}
+.sec3-div2 {
+    display: flex;
+    text-align: left;
+    margin-top: 5%;;
+}
+.plan-box {
+    margin:auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 63px 22px 0px 23px;
+    box-shadow: 0 0 20px #757070;
+}
+.plan-box h1 {
+   font-size:24px;
+   font-weight: 600;
+   padding:0;
+}
+.plan-box p {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+#green {
+    background: rgba(79, 157, 166, 0.1);
+}
+#green img {
+    height:50px;
+    width: 59px;
+}
+#orange {
+    background: rgba(255, 166, 0, 0.13);
+}
+#red {
+    background: rgba(255, 89, 89, 0.1);
+}
+
+/* Section 4 css part*/
+.section4 {
+    height: 660px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.sec4-h1 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+.sec4-div1 {
+    display:flex;
+    
+}
+.sec4-div1-innerdiv1 {
+    margin: auto;
+    width: 30%;
+    height: 420px;
+    box-shadow: 0 0 10px #757070;
+    border-radius: 15px;
+    padding:1%
+    
+}
+.section4 img {
+    width:100%;
+    height:200px;
+    border-radius: 15px;
+}
+.sec4-div1-innerdiv1 h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+.sec4-div1-innerdiv1 p {
+    line-height: 24px;
+    font-size: 16px;
+}
+.alart {
+    color: red;
+}
+.normal {
+    color: green;
+}
+.yellow {
+    color: rgba(199, 199, 65, 0.815);
+}
+/* Section 5 css part*/
+.section5 {
+    height: 580px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 14%;
+    padding-right: 14%;
+}
+.sec5-div1 h1{
+    padding: 0;
+}
+.sec5-div1-innerdiv1 {
+    padding: 0;
+}
+.sec5-div2 {
+    background-color: rgb(236, 238, 212);
+    width:800px;
+    height:200px;
+    margin-top: 8%;
+}
+.form-class {
+    padding-top: 74px;
+    padding-left: 180px;
+}
+.form-div1 {
+    height: 48px;
+    display: flex;
+}
+
+input[type="email"],textarea{
+    background-color: #D9D9D9;
+}
+input[type="email"]{
+    width: 275px;
+    height:100%;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    size: 48px;
+}
+input[type="email"]::placeholder{
+    color: #B3B3B3;
+    padding-left:3%
+}
+.submit-btn{
+    width: 157px;
+    height: 50px;
+    padding: 0;
+    background-color: rgb(168, 177, 42);
+    color: white;
+    font-size: 18px;
+    border:none;
+    border-radius:0 5px 5px 0;
+}
+
+/* footer part */
+footer {
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+footer h1 {
+    font-family: 'Lobster', cursive;
+    font-size:36px;
+    margin:0;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+    padding-top: 24px;
+    color: #D9DBE1;
+}
