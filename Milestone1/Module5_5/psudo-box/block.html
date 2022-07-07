@@ -7,24 +7,41 @@
     <title>Document</title>
     <style>
         div{
-            background:coral
-        }
+            background:coral;
+            width: 300px;
+            height: 300px;
+            padding-top: 35px;
+            margin-top: 50px;
+        } 
         h1 {
-            display:inline;
-            background: orangered
-            
+           /* display:inline; */
+            background: orangered;  
+        }
+
+        h2{
+            background-color: aqua;
+        }
+        p{
+            background-color: chartreuse
         }
         span{
             margin-left: 60px;
-            margin-top: 100px; /*this line not working because span is inline element. to make this work we need to make this span to inline-block. it makes span act like a block element property with staying inline. */
+            /*margin-top: 100px; /*this line not working because span is inline element. to make this work we need to make this span to inline-block. it makes span act like a block element property with staying inline. this will happen for hight and width too.*/
             background : yellowgreen
         }
         .inline-block {
-            display: inline-block;
-            height: 100px;
+          /*  display: inline-block;*/
+            height: 250px;
+            width: 250px;
         }
         a{
-            display: block;
+           /* display: block;*/
+        }
+        .img-slice{
+            border: 90px solid ;
+            border-image:url(4.png) ;
+            border-image-slice: 30%;
+            
         }
     </style>
 </head>
@@ -39,7 +56,7 @@
     <a href="">link</a>
     <a href="">link</a>
     <a href="">link</a>
-    <div>
+    <div class="img-slice">
         <h2>room-1</h2>
         <p>someone came</p>
     </div>
