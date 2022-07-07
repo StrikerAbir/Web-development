@@ -30,6 +30,30 @@
         a:visited{
             color:green;
         }
+        .ul1 li:first-child{
+            color: rgb(226, 178, 115);
+        }
+        .ul1 li:last-child{
+            color:blueviolet;
+        }
+        .ul1 li:nth-child(2){
+            color: rgb(241, 133, 151);
+        }
+        .ul2 li:nth-child(2n){
+            color: green;
+        }
+        .ul2 li:nth-child(2n+1){
+            background-color: darkgray
+        }
+        h3::before{
+            background-color: yellow;
+            content: " (using ::before for pseudo element) "
+           
+        }
+        h3::after{
+            background-color: yellowgreen;
+            content: "using ::after for pseudo element";
+        }
     </style>
 </head>
 <body>
@@ -41,5 +65,30 @@
     <a href="https://www.google.com"> google</a>
     <a href="https://www.programminghero.com">pro hero</a>
     <a href="https://www.anything.com">never visited</a>
+    <hr>
+    <h3>mid size header 1</h3>
+    <h3>mid size header 2</h3>
+    <h3>mid size header 3</h3>
+    <h3>mid size header 4</h3>
+    <h3>mid size header 5</h3>
+    <h3>mid size header 6</h3>
+    <hr>
+    <ul class="ul1">
+        <li>Atik</li>
+        <li>Tisha</li>
+        <li>Juhi</li>
+        <li>Ashik</li>
+        <li>Anam</li>
+        <li>Konok</li>
+    </ul>
+    <ul class="ul2">
+        <li>Atik</li>
+        <li>Tisha</li>
+        <li>Juhi</li>
+        <li>Ashik</li>
+        <li>Anam</li>
+        <li>Konok</li>
+        <li>Shifa</li>
+    </ul>
 </body>
 </html>
