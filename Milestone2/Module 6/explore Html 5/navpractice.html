@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo home</title>
+    <style>
+        nav > ul{
+            display:flex;
+        }
+        nav li{
+            list-style: none;
+            margin-right: 10px;
+            padding: 0 10px;
+        }
+        nav li:hover{
+            background-color: lightgreen;
+        }
+        a { 
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            background-color: lightgrey;
+            padding:0;
+        }
+        .dropdown li{
+            padding : 0;
+            margin: 0;
+        }
+        nav>ul>li:hover>ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="navpractice.html">HOME</a></li>
+            <li><a href="navpractice.html">Table</a></li>
+            <li><a href="navpractice.html">Lists</a>
+            <ul class="dropdown">
+                <li>link-1</li>
+                <li>link-2</li>
+                <li>link-3</li>
+                <li>link-4</li>
+            </ul>
+            </li>
+            <li><a href="navpractice.html">Offers</a></li>
+            <li><a href="navpractice.html">About</a></li>
+        </ul>
+    </nav>
+    <h1>HOME demo</h1>
+</body>
+</html>
