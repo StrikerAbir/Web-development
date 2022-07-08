@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Specificity</title>
+    <style>
+        h1{
+            color: antiquewhite;
+            background-color: cornsilk
+        }
+        h1{
+            color: rgb(103, 141, 222);
+        }
+        .color{
+            color: green !important;
+        }
+        h1{
+            color: rgb(203, 25, 52);
+        }
+        #usa{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>My heading no -1</h1>
+    <h1 id="usa" class="color" style="color: yellow">My heading no -2</h1>
+    <h1>My heading no -3</h1>
+    <h1>My heading no -4</h1>
+    <p>tis is my para 1</p>
+    <p>tis is my para 2</p>
+    <p>tis is my para 3</p>
+    <p>tis is my para 4</p>
+    <p>tis is my para 5</p>
+</body>
+</html>
