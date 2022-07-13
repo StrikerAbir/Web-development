@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration:none;
+            color: black;
+        }
+        .navbar > ul{
+            display: flex;
+        }
+        .navbar li{
+            list-style: none;
+            padding:20px 20px;
+            margin-right: 40px;
+            font-size:20px;
+            background-color:rgb(140, 243, 140)
+        }
+        .navbar li:hover{
+            background-color: gold;
+        }
+        .dropdown{
+            display:none;
+            position:absolute;
+            padding: 0;
+            margin-top: 20px;
+            margin-left: -12px;
+        }
+        .dropdown li{
+            background-color:red;
+            padding :10px;
+            margin: 0;
+        }
+        .navbar li:hover .dropdown{
+            display:block;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th,td{
+            text-align:center;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .position{
+            position: absolute;
+        }
+        .position div{
+            border: 1px dotted black;
+            width:200px;
+        }
+        #boy{
+            position: relative;
+            top:50px;
+            z-index: 2;
+        }
+        #ring{
+           position: relative;
+           z-index: 1;
+        }
+        #water{
+            position: relative;
+            top: -50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Form</a></li>
+                <li>Music
+                    <ul class="dropdown">
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Video</a></li>
+                        <li><a href="#">Link-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1></h1>
+            <table>
+                <thead>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bane</td>
+                        <td>Chor</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Banta</td>
+                        <td>Dakat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Popo</td>
+                        <td>Fokir</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="position">
+        <div id="boy"><img src="../../../Milestone1/Module5_5/psudo-box/images/boy.svg" alt=""></div>
+        <div id="ring"><img src="../../../Milestone1/Module5_5/psudo-box/images/ring.svg" alt=""></div>
+        <div id="water"><img src="../../../Milestone1/Module5_5/psudo-box/images/water.svg" alt=""></div>
+    </div>
+</body>
+</html>
