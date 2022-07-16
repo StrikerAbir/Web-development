@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes sliding {
+            /* from { 
+                background-color: rgb(102, 205, 102);
+            }
+            to{
+                background-color: red;
+            } */
+            0%{
+                background-color: yellow;
+                left: 0;
+                top:0;
+                
+            }
+            25%{
+                background-color: red;
+                top: 265px;
+                transform:scale(.5);
+            }
+            50%{
+                background-color: yellow;
+                top: 0;
+                transform:scale(1);
+            }
+            75%{
+                background-color: red;
+                top: 265px;
+                transform:scale(.5);
+            }
+            100%{
+                background-color: yellow;
+                left: 650px;
+                top: 0;
+            }
+        }
+        .stage{
+            width: 700px;
+            height: 300px;
+            background-color: lightgrey;
+        }
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(102, 205, 102);
+            border-radius: 50%;
+            position: relative;
+            animation: sliding 2s ease-in-out 0.5s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>lets learn animation</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
