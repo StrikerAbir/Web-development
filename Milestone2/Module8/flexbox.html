@@ -7,30 +7,36 @@
     <title>Explore flexbox</title>
     <style>
         .container{
-            display:flex;
-            /* justify-content: space-evenly; */
-            justify-content: center;
+            border: 3px dotted purple;
+             display:flex;
             height: 300px;
-            align-items: center;
+            /* justify-content: space-evenly; */
+            /* justify-content: center; */
+            
+            /* align-items: center; */
             /* flex-direction: row-reverse; */
             /* flex-direction: column-reverse; */
-            flex-wrap: wrap; 
-            border: 3px dotted purple
+            /* flex-wrap: wrap;  */
+            align-items: ;
+            
             
         }
         .box{
             font-size: 3ex;
             border: 3px dashed peru;
             width: 100px;
-            height: 100px;
+             /* height: 100px;  */
+        }
+        .box2{
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">box-1</div>
-        <div class="box">box-2</div>
-        <div class="box">box-3</div>
+        <div class="box box2">box-2</div>
+        <!-- <div class="box">box-3</div>
         <div class="box">box-4</div>
         <div class="box">box-5</div>
         <div class="box">box-6</div>
@@ -47,7 +53,7 @@
         <div class="box">box-17</div>
         <div class="box">box-18</div>
         <div class="box">box-19</div>
-        <div class="box">box-20</div>
+        <div class="box">box-20</div> -->
     </div>
 </body>
 </html>
