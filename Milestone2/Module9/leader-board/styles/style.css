@@ -1,0 +1,257 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* common style or utility */
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    background-color: #F3F1FF;
+    
+}
+header{
+    background-color: #562EFF;
+    height: 94px;
+    display: flex;
+    justify-content:center;
+    
+}
+
+/* navigaton bar  */
+.nav-bar{
+    display:flex;
+    justify-content:space-between;
+    height:inherit;
+    width: 930px;
+}
+.nav-name-icon{
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+.nav-icon{
+    height:50px;
+    width:40px;
+}
+.nav-name{
+    color:white;
+    font-size: 24px;
+    margin-left: 15px;
+}
+.nav-items{
+    display:flex;
+    align-items:center;
+}
+.nav-items li{
+    list-style: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 36px;
+}
+.fa-bars{
+    font-size:30px;
+}
+/* dropdown */
+ .dropdown-icon-li{
+    display:none;
+    position: relative;
+    margin-right: 20px;
+}
+.dropdown-items{
+    display: none;
+    padding: 0;
+    position:absolute;
+    padding-top: 30px;
+    left: -24px;
+}
+.dropdown-items li{
+    padding: 10px;
+    margin: 0;
+    background-color:#562EFF;
+    border-top: 2px solid black;
+    border-radius: 2px;
+} 
+
+main{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.container {
+    box-sizing: border-box;
+    background-color: #ffff;
+    width: 870px;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
+}
+hr{
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
+}
+/* top players style */
+.top-players{
+    margin-bottom: 30px;
+}
+.section-title{
+    color: #562EFF;
+    font-size: 24px;
+    margin-top:3px;
+
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 30px;
+}
+.player{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    width:56px;
+    height: 56px;
+}
+.player-name{
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+/* top blog styles */
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 26px;
+
+}
+.blog{
+    display: flex;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size:20px;
+}
+.blog-author{
+    color:#9F9F9F;
+    font-size: 16px;
+}
+.blog-author a{
+    color: #562EFF;
+    text-decoration: none;
+}
+/* courses styles */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 24px;
+    justify-items: center;
+}
+.course{
+    box-sizing: border-box;
+    width :252.42px;
+    border-radius:14px;
+    padding:11px 17px 17px;
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.156);
+  
+}
+.course .course-banner img{
+    width: 100%;
+    height: 104px;
+}
+.course-title{
+    margin-bottom: 8px;
+}
+.course-author{
+    color:#ED6B4F;
+    font-size:14.60px;
+    margin-top: 0;
+    margin: bottom px;
+}
+.course-info {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+.course-duration{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:0;
+    width: 94.83px;
+    height: 29.38px;
+    color: #FF4A60;
+    background-color: #FFE4E8;;
+    border-radius: 15px;
+    
+}
+footer{
+    height: 90px;
+    background-color: black;
+}
+/* media query */
+
+/* mobile device */
+@media screen and (max-width:688px){
+    .container{
+        width:100%;
+      
+    }
+    .players,.blogs,.courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player,.blog{
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }   
+    /* nav menu dropdown */
+    .nav-bar{
+        width:100%;
+    }
+     .hide{
+        display: none;
+    }
+    .dropdown-icon-li{
+        display:block;
+    }
+    nav>ul>li:hover>ul {
+        display: block;
+        color: #562EFF;
+    }
+    
+    .dropdown-icon-li>ul>li:hover {
+        color: #dfd773;
+    } 
+
+}
+
+/* tablet devices */
+@media screen and (min-width:689px) and (max-width:992px){
+    .nav-bar{
+            width: 100%;
+        }
+    .container {
+            width: 100%;
+            
+        }
+    .players,
+    .blogs,
+    .courses {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+}
