@@ -1,0 +1,49 @@
+.like-tost{
+    width: 250px;
+    right: 5%;
+}
+.section2{
+    margin-bottom: 8%;
+}
+
+.section3{
+    margin-bottom: 8%;
+}
+.section4{
+    margin-bottom:8%;
+}
+.people-feedback{
+    width:90%;
+    
+}
+@media screen and (max-width: 576px) {
+    .section1 img{
+        height: 300px;
+    }
+    .section2{
+        flex-direction: column-reverse;
+    }
+    
+}
+@media screen and (min-width:577px) and (max-width:768px) {
+    .section2 {
+            flex-direction: column-reverse;
+        }
+}
+@media screen and (min-width:769) and (max-width:992){
+    .section2 {
+            flex-direction: column-reverse;
+        }
+}
+@media screen and (min-width: 993px) {
+    .venue-description{
+        width: 50%;
+    }
+    .half-width{
+        width: 50%;
+    }
+    .selected-card {
+        position: absolute;
+        bottom: 5%;
+    }
+}
