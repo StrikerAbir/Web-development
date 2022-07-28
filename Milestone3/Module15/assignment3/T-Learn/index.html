@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Learn Website</title>
+    <link rel="shortcut icon" href="images/online-learning.png" type="image/x-icon">
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/99bc7f2386.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind elements -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
+     <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans - serif'],
+                        mono: ['Bebas Neue', 'cursive'],
+                        
+                    },
+                    colors: {
+                        clifford: '#da373d',
+                        
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- header start -->
+    <header>
+        <!-- navBar -->
+        <nav class="bg-lime-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded w-full fixed z-10">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="#" >
+                    <span class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-widest hover:text-lime-500">T-Learn</span>
+                </a>
+                <div class="flex md:order-2">
+                    <button type="button"
+                        class="text-lime-500 border-2 border-lime-500 hover:text-lime-50 hover:bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 hidden md:block">Register</button>
+                    <button data-collapse-toggle="navbar-cta" type="button"
+                        class="inline-flex items-center p-2 text-sm text-lime-500 rounded-lg md:hidden"
+                        aria-controls="navbar-cta" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="flex flex-col p-4 mt-4  rounded-lg border-2 border-lime-500 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  ">
+                        <li>
+                            <a href="#" class="block py-2 pr-4 pl-3 md:p-0 hover:text-lime-500" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#courses" class="block py-2 pr-4 pl-3  md:p-0 hover:text-lime-500">Courses</a>
+                        </li>
+                        <li>
+                            <a href="#feedback" class="block py-2 pr-4 pl-3  md:p-0 hover:text-lime-500">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="block py-2 pr-4 pl-3  md:p-0 hover:text-lime-500">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pr-4 pl-3  md:p-0 hover:text-lime-500">Contact  Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slider -->
+        <section class="container mx-auto px-2 sm:px-4 pt-28 pb-24">
+            <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+                <!-- indicators -->
+                <div class="carousel-indicators absolute right-0 bottom-0 left-0 md:flex justify-center p-0 mb-4 hidden">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    
+                </div>
+                <div class="carousel-inner relative w-full overflow-hidden">
+                    <!-- item-1 -->
+                    <div class="carousel-item active relative float-left w-full ">
+                        <img src="images/cover/cover-1.png" class="block w-full" alt="..." /> 
+                        <div class="bg-black h-full w-full opacity-50 absolute top-0"></div>
+                        
+                        <div class="carousel-caption flex flex-col items-center  absolute text-center lg:bottom-1/4 lg:top-auto 
+                        sm:top-1/4  bottom-3 md:space-y-4 space-y-2">
+                            <div class="lg:text-6xl md:text-4xl text-lg font-semibold ">
+                                <p>Get Started Digital
+                                <span class="md:block">Learning</span>
+                                </p>
+                              
+                            </div>
+                            <p class="lg:text-lg sm:text-base text-sm">Online classes have been the best possible solution for the educational institutions as well as the students.
+                            <span class="hidden md:inline"> Online education or online classes are most effective way to learning now.</span></p>
+                            <button type="button"
+                                class="text-lime-50 bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">Get Started</button>
+                        </div>
+                    </div>
+                    <!-- item-2 -->
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="images/cover/cover-3.jpg" class="block w-full " alt="..." />
+                        <div class="bg-black h-full w-full opacity-50 absolute top-0"></div>
+
+                        <div class="carousel-caption flex flex-col items-center  absolute text-center lg:bottom-1/4 lg:top-auto sm:top-1/4  bottom-3 md:space-y-4 space-y-2">
+                            <div class="lg:text-6xl md:text-4xl text-lg font-semibold ">
+                                <p>Get Started Digital <span class="md:block">Learning</span>
+                                </p>
+                            </div>
+                            <p class="lg:text-lg sm:text-base text-sm">Online classes have been the best possible solution for the educational
+                                institutions as well as the students. <span class="hidden md:inline"> Online education or online classes are
+                                    most effective way to learning now.</span></p>
+                            <button type="button"
+                                class="text-lime-50 bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">Get
+                                Started</button>
+                        </div>
+                    </div>
+                    <!-- item-3 -->
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="images/cover/cover-2.jpg" class="block w-full " alt="..." />
+                        <div class="bg-black h-full w-full opacity-50 absolute top-0"></div>
+                        <div
+                            class="carousel-caption flex flex-col items-center  absolute text-center lg:bottom-1/4 lg:top-auto sm:top-1/4  bottom-3 md:space-y-4 space-y-2">
+                            <div class="lg:text-6xl md:text-4xl text-lg font-semibold ">
+                                <p>Get Started Digital <span class="md:block">Learning</span>
+                                </p>
+                            </div>
+                            <p class="lg:text-lg sm:text-base text-sm">Online classes have been the best possible solution for the
+                                educational institutions as well as the students. <span class="hidden md:inline"> Online education or online
+                                    classes are most effective way to learning now.</span></p>
+                            <button type="button"
+                                class="text-lime-50 bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">Get
+                                Started</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 "
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </header>
+
+    <!-- main start -->
+    <main class="container mx-auto px-2 sm:px-4 pb-24">
+        <!-- section 1 -->
+        <section id="courses" class="pb-24 flex flex-col justify-center">
+            <div class="flex justify-center">
+                <div class="lg:w-1/2 w-4/5 text-center mb-9">
+                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide">Discover Our Popular
+                        <br>Courses</h2>
+                    <p>These Courses are top rated and popular among learners. Courses are taken by talented teachers around world from
+                        best universities.</p>
+                </div>
+            </div>
+            
+            <div class="grid xl:grid-cols-2 grid-cols-1 gap-6">
+                <div class="">
+                    <a href="#" class="flex flex-col items-center bg-lime-50 rounded-lg border shadow-md md:flex-row">
+                        <img class="object-cover w-full h-56 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="images/course/course-1.png" alt="">
+                        <div class="flex flex-col justify-between leading-normal p-4">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">Fundamental Of UI/UX Design</h5>
+                            <p class="mb-3 font-normal">This course will allow you to indtroduce yourself in front of everyone as a expert on this object. Feel free to join and improve your skills.</p>
+                            <p class="text-lime-500 font-semibold text-lg">Price : 20$</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="flex flex-col items-center bg-lime-50 rounded-lg border shadow-md md:flex-row  ">
+                        <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="images/course/course-2.png" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">Javascript Basic to advanced</h5>
+                            <p class="mb-3 font-normal">This course will allow you to indtroduce yourself in front of everyone as a expert on this object. Feel free to join and improve your skills.</p>
+                            <p class="text-lime-500 font-semibold text-lg mb-3">Price : 20$</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="flex flex-col items-center bg-lime-50 rounded-lg border shadow-md md:flex-row">
+                        <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="images/course/course-3.png" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">Fullstack Web Development</h5>
+                            <p class="mb-3 font-normal">This course will allow you to indtroduce yourself in front of everyone as a expert on this object. Feel free to join and improve your skills.</p>
+                            <p class="text-lime-500 font-semibold text-lg mb-3">Price : 20$</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="flex flex-col items-center bg-lime-50 rounded-lg border shadow-md md:flex-row">
+                        <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="images/course/course-4.png" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">Digital Marketing</h5>
+                            <p class="mb-3 font-normal">This course will allow you to indtroduce yourself in front of everyone as a expert on this object. Feel free to join and improve your skills.</p>
+                            <p class="text-lime-500 font-semibold text-lg mb-3">Price : 20$</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="flex flex-col items-center bg-lime-50 rounded-lg border shadow-md md:flex-row">
+                        <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="images/course/course-5.png" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">Photography Basic Rules</h5>
+                            <p class="mb-3 font-normal">This course will allow you to indtroduce yourself in front of everyone as a expert on this object. Feel free to join and improve your skills.</p>
+                            <p class="text-lime-500 font-semibold text-lg mb-3">Price : 20$</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="flex flex-col items-center bg-lime-50 rounded-lg border shadow-md md:flex-row">
+                        <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="images/course/course-6.png" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight">Motion Graphics</h5>
+                            <p class="mb-3 font-normal">This course will allow you to indtroduce yourself in front of everyone as a expert on this object. Feel free to join and improve your skills.</p>
+                            <p class="text-lime-500 font-semibold text-lg mb-3">Price : 20$</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-10">
+                <button type="button" class="text-lime-50 bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">View All</button>
+            </div>
+            
+        </section>
+
+        <!-- section-2 -->
+        <section class="mb-24">
+           <div class="md:flex bg-lime-50">
+                <img class="md:w-5/12" src="images/working.png" alt="">
+                <div class="md:p-20 p-10 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <h2 class="lg:text-5xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide mb-3">Explore The learning <br>Institute</h2>
+                        <p> There are many variations of passages of courses available, but the majority have done many alteration in some
+                            courses, because they are confused which don't look good foe a student. If you are going to learn from course,
+                            you need to be sure. Anything happens in the middle of course but focus is must. </p>
+                    </div>
+                    <div class="mb-10">
+                        <button type="button"
+                            class="text-lime-50 bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">Read
+                            More</button>
+                    </div>
+                    <div class="flex flex-wrap  justify-between mt-5  md:mt-0">
+                        <div class="mb-2">
+                            <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide mb-3">3.2K+</h2>
+                            <p class="whitespace-nowrap">Online Course</p>
+                        </div>
+                        <div>
+                            <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide mb-3">600+</h2>
+                            <p class="whitespace-nowrap">Expert Member</p>
+                        </div>
+                        <div>
+                            <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide mb-3">1K+</h2>
+                            <p class="whitespace-nowrap">Rating and Review</p>
+                        </div>
+                    </div>
+                    
+                </div>
+           </div>
+
+        </section>
+
+        <!-- section3 -->
+        <section class="pb-24">
+            <div class="py-20 px-24 bg-lime-500 items-center flex flex-col lg:flex-row lg:items-center lg:justify-between rounded-2xl">
+                <div class="text-white text-center lg:text-left">
+                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide lg:mb-3">Ready to Join?</h2>
+                    <p>If you want to join courses then please register now.</p>
+                </div>
+                <!-- modal -->
+                <div class="mt-3 lg:mt-0">
+                    <div>
+                        <button class="block w-full md:w-auto font-semibold text-lime-500 bg-lime-50  border border-lime-200 rounded-lg hover:bg-lime-200 hover:text-black text-sm px-5 py-2.5 text-center" type="button" data-modal-toggle="medium-modal">Register Now
+                        </button>
+   
+                    </div>
+                    <div id="medium-modal" tabindex="-1"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                        <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
+                            <!-- Modal content -->
+                            <div class="relative bg-lime-50 rounded-lg shadow border-2 border-lime-500">
+                                <!-- Modal header -->
+                                <div class="flex justify-between items-center p-5 rounded-t border-b border-lime-500">
+                                    <h3 class="text-xl font-medium"> Register Now </h3>
+                                    <button type="button"
+                                        class="text-lime-500 bg-transparent border border-lime-50 hover:border-lime-500 hover:text-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-toggle="medium-modal">
+                                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed"> Help protect your website and its users with clear and fair website terms and conditions. These terms and conditions for
+                                    a website set out key issues such as acceptable use, privacy, cookies, registration and passwords, intellectual
+                                    property, links to other sites, termination and disclaimers of responsibility. Terms and conditions are used and
+                                    necessary to protect a website owner from liability of a user relying on the information or the goods provided from the
+                                    site then suffering a loss. Making your own terms and conditions for your website is hard, not impossible, to do. It can
+                                    take a few hours to few days for a person with no legal background to make. But worry no more; we are here to help you
+                                    out. All you need to do is fill up the blank spaces and then you will receive an email with your personalized terms and
+                                    conditions. </p>
+                                    <p class="text-base leading-relaxed"> Agree to Register? </p>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="flex items-center p-6 space-x-2 rounded-b border-t border-lime-500 ">
+                                    <button data-modal-toggle="medium-modal" type="button"
+                                        class="text-white bg-lime-500 hover:bg-lime-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">I
+                                        accept</button>
+                                    <button data-modal-toggle="medium-modal" type="button"
+                                        class="text-white bg-red-500 hover:bg-red-600 rounded-lg text-sm font-medium px-5 py-2.5">Decline</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section-4 -->
+        <section class="mb-24">
+            <div class="flex justify-center lg:justify-start">
+                <div class="text-center lg:text-left mb-9 w-4/5">
+                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide ">Meet Our Successful <span
+                            class="flex flex-col">Students</span>
+                    </h2>
+                    <p> Our successful students and their current position given down below. </p>
+                </div>
+            </div>
+            
+            <div class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="border
+                border-lime-500 rounded-lg">
+                    <img class="w-full"  src="images/student/student-1.png" alt="">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Atiq Aziz</h3>
+                        <p>UIUX Designer</p>
+                    </div>
+                </div>
+                <div class="border border-lime-500 rounded-lg">
+                    <img class="w-full" src="images/student/student-2.png" alt="">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Jahanara Tisha</h3>
+                        <p>Motion Design</p>
+                    </div>
+                </div>
+                <div class="border border-lime-500 rounded-lg">
+                    <img class="w-full" src="images/student/student-3.png" alt="">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Abir Hasan</h3>
+                        <p>Graphic Designer</p>
+                    </div>
+                </div>
+                <div class="border border-lime-500 rounded-lg">
+                    <img class="w-full" src="images/student/student-4.png" alt="">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold ">Golapsha Akter</h3>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-10">
+                <button type="button"
+                    class="text-lime-50 bg-lime-500 font-semibold rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">View
+                    All</button>
+            </div>
+        </section>
+
+        <!-- section 5 -->
+        <section id="feedback" class="pb-24">
+            <div class="flex justify-center">
+                <div class="text-center mb-9 w-2/3">
+                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide ">Some Students Feedback</h2>
+                    <p>Down below there given some of students feedback about our courses. We are happy to be your learning partner.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <!-- person 1 -->
+                <div class="p-10 border border-lime-500 rounded-xl space-y-5 shadow-xl">
+                    <div class="flex justify-between">
+                        <img src="images/comma.png" alt="">
+                        <div>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-slate-300"></i>
+                        </div>
+                    </div>
+                    <p>This course was short but very informative and very helpful for an aspiring leader like myself. It also helped me
+                        understand how to view or understand when I receive feedback. I highly recommend it!!</p>
+                    <div class="flex">
+                       <img src="images/student/student-5.png" alt="">
+                       <div class="pl-5">
+                            <h3 class="text-base font-semibold">Mihir Roy</h3>
+                            <p>UI Designer</p>
+                       </div> 
+                    </div>
+                </div>
+                <!-- person2 -->
+                <div class="p-10 border border-lime-500 rounded-xl space-y-5 shadow-xl">
+                    <div class="flex justify-between">
+                        <img src="images/comma.png" alt="">
+                        <div>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-slate-300"></i>
+                        </div>
+                    </div>
+                    <p>I enjoyed the course and learned a lot from it. The content is well organized and focused on practical situations. I
+                    particularly enjoyed the bits of psychological research shared in the content.</p>
+                    <div class="flex">
+                        <img src="images/student/student-6.png" alt="">
+                        <div class="pl-5">
+                            <h3 class="text-base font-semibold">Fahima Akter</h3>
+                            <p>Graphic Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section 6 -->
+        <section id="faq" class="flex flex-col items-center">
+            <div class="lg:pb-24 text-center lg:w-4/5">
+                <div class="pb-10">
+                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide mb-3">Frequently Asked Questions
+                    </h2>
+                    <p>Down below there are given most asked questions and answers. It will help you to gain more knowledge and have an
+                        idea about out website.</p>
+                </div>
+                <div id="accordion-collapse" data-accordion="collapse">
+                    <!-- one -->
+                    <h2 id="accordion-collapse-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0  rounded-t-xl  text-black border-lime-500 focus:bg-lime-500 focus:text-white 
+                                        " data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                            aria-controls="accordion-collapse-body-1">
+                            <span>What is difference between Bootstrap and Tailwind?</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-1" class="" aria-labelledby="accordion-collapse-heading-1">
+                        <div class="p-5 font-light border-2 border-b-0 border-lime-500 bg-lime-50">
+                            <p class="mb-2">Bootstrap comes with a set of pre-styled responsive, mobile-first components that possess a
+                                definite UI kit. Tailwind CSS uses a set of utility classes to create a neat UI with more flexibility
+                                and uniqueness. Sites created using Bootstrap follow the generic pattern that makes them look identical.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- two -->
+                    <h2 id="accordion-collapse-heading-2">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0  rounded-t-xl  text-black border-lime-500 focus:bg-lime-500 focus:text-white"
+                            data-accordion-target="#accordion-collapse-body-2" aria-expanded="true"
+                            aria-controls="accordion-collapse-body-2">
+                            <span>What is difference between FlexBox and Grid?</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-2" class="" aria-labelledby="accordion-collapse-heading-2">
+                        <div class="p-5 font-light border-2 border-b-0 border-lime-500 bg-lime-50">
+                            <p class="mb-2">Grid and flexbox. The basic difference between CSS Grid Layout and CSS Flexbox Layout is
+                                that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for
+                                two-dimensional layout - rows, and columns at the same time.</p>
+                        </div>
+                    </div>
+                    <!-- three -->
+                    <h2 id="accordion-collapse-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0  rounded-t-xl  text-black border-lime-500 focus:bg-lime-500 focus:text-white"
+                            data-accordion-target="#accordion-collapse-body-3" aria-expanded="true"
+                            aria-controls="accordion-collapse-body-3">
+                            <span>What is CSS Box model?</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-3" aria-labelledby="accordion-collapse-heading-3">
+                        <div class="p-5 font-light border-2 border-b-0 border-lime-500 bg-lime-50">
+                            <p class="mb-2">In CSS, the term "box model" is used when talking about design and layout. The CSS box model
+                                is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding,
+                                and the actual content.</p>
+                        </div>
+                    </div>
+                    <!-- four -->
+                    <h2 id="accordion-collapse-heading-4">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left border-2   rounded-t-xl  text-black border-lime-500 focus:bg-lime-500 focus:text-white"
+                            data-accordion-target="#accordion-collapse-body-4" aria-expanded="true"
+                            aria-controls="accordion-collapse-body-4">
+                            <span>What is Semantic tags?</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-4" aria-labelledby="accordion-collapse-heading-4">
+                        <div class="p-5 font-light border-2 border-b-0 border-lime-500 bg-lime-50">
+                            <p class="mb-2">Semantic HTML elements are those that clearly describe their meaning in a human- and
+                                machine-readable way. Elements such as "header , footer and article" are all considered semantic because
+                                they accurately describe the purpose of the element and the type of content that is inside them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section 7 -->
+        <section class="text-center hidden lg:block">
+            <h2 class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-wide mb-9" >Trusted by over 800+ companies</h2>
+            <div class="flex justify-evenly">
+                <img src="images/company/company-1.png" alt="">
+                <img src="images/company/company-2.png" alt="">
+                <img src="images/company/company-3.png" alt="">
+                <img src="images/company/company-4.png" alt="">
+                <img src="images/company/company-5.png" alt="">
+                <img src="images/company/company-6.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!-- footer start -->
+    <footer class="px-2 sm:px-4 py-24 bg-lime-50 text-center  ">
+        <div class="mb-4">
+            <a
+                class="lg:text-4xl md:text-3xl text-2xl font-extrabold font-mono tracking-widest hover:text-lime-500 ">T-Learn</a>
+        </div>
+        
+        <p>Sultanate Office 41, Zawaya Buildin, Ghala Muscat,<br>Sultanate of Oman</p>
+        <div class="flex justify-center mb-4">
+            <a class="hover:text-lime-500" href="#">Privacy Policy</a>
+            <a href="#" class="border-l-2 border-black ml-2 pl-2 hover:text-lime-500">Term of use</a>
+        </div>
+        
+        <div class="text-xl">
+            <a href="https://www.facebook.com/" target="_blank" class="mr-2 hover:text-lime-500"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/"
+                target="_blank" class="mr-2 hover:text-lime-500"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="mr-2 hover:text-lime-500"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" class="mr-2 hover:text-lime-500"><i
+                    class="fa-brands fa-youtube-square"></i></a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+</html>
+
+<!-- damn i am surprised with my work.. keep it up -->
