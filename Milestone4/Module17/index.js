@@ -10,3 +10,8 @@ console.log(number[2])
 // find the index of an element
 var position = number.indexOf(87);
 console.log(position);
+
+var num = [1, 5, 8];
+a=num.indexOf(0);
+b = num.indexOf(1);
+console.log(a,b)

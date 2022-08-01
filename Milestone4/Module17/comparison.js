@@ -9,3 +9,4 @@ var num1 = 30;
 var num2 = 63;
 console.log(num1 < num2);
 
+console.log(6 >= 6);

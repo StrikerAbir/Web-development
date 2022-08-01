@@ -16,3 +16,4 @@ number.unshift(30);
 console.log(number);
 number.shift();
 console.log(number);
+
