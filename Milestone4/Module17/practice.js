@@ -1,6 +1,7 @@
 // practice 1
 var fruits = ['apple', 'banana', 'orange'];
 console.log(fruits.indexOf('banana'));
+fruits[fruits.indexOf('banana')] = 'mango';
 fruits.pop('orange');
 fruits.push('watermellon');
 console.log(fruits);
