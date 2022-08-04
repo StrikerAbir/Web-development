@@ -24,6 +24,8 @@ var propertyname = 'keyboard';
 var property = shoppingcart[propertyname];
 console.log(property)
 
+
+
 // set property value
 shoppingcart.mouse = 20;
 console.log(shoppingcart);
@@ -31,3 +33,4 @@ console.log(shoppingcart);
 shoppingcart['keyboard'] = 2;
 console.log(shoppingcart);
  
+console.log(shoppingcart["pen"]);
