@@ -13,9 +13,11 @@ if (gap < 5) {
     console.log('go away');
 }
 
-// round
+// round er khetre .5 theke behsi hole boro round dibe. kom hole soto round.
 const number = 3.23489
-console.log(Math.round(number));
+console.log(Math.round(number)); 
+const number4 = 3.5
+console.log(Math.round(number4)); 
 const number2 = 4.23489
 console.log(Math.ceil(number2));
 console.log(Math.floor(number2));
