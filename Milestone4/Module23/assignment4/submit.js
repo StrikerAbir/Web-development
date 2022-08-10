@@ -63,4 +63,21 @@ function publicBusFare(people) {
          const cost = (people - (peopleBus + peopleMicro)) * 250;
          return cost;
      }
- }
+}
+
+// Problem 5: isBestFriend
+
+function isBestFriend(a, b) {
+    if (typeof a != 'object' || a === NaN
+        || typeof b != 'object' || b === NaN) {
+        return 'Please enter two objects.';
+    } else if (Array.isArray(a) === true || Array.isArray(b) === true) {
+        return 'Please enter two objects.';
+    } else {
+        if (a.name === b.friend && b.name === a.friend) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

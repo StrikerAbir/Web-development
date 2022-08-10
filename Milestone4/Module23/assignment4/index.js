@@ -101,9 +101,38 @@ function publicBusFare(people) {
          return cost;
      }
  }
-console.log(publicBusFare('dfs'));
-console.log(publicBusFare(50));
-console.log(publicBusFare(55));
-console.log(publicBusFare(112));
-console.log(publicBusFare(235));
-console.log(publicBusFare(365));
+// console.log(publicBusFare('dfs'));
+// console.log(publicBusFare(50));
+// console.log(publicBusFare(55));
+// console.log(publicBusFare(112));
+// console.log(publicBusFare(235));
+// console.log(publicBusFare(365));
+
+// Problem 5: isBestFriend
+
+/*তোমাকে একটি ফাংশন লিখতে হবে isBestFriend যেটি প্যরামিটার হিসেবে দুইটি অবজেক্ট নিবে । তোমাকে অবজেক্ট দুইটি নিয়ে দেখতে হবে এরা দুইজন একে অপরের বেস্টফ্রেন্ড কিনা । যদি বেস্ট ফ্রেন্ড হয় তাহলে true রিটার্ন করবে , না হলে false রিটার্ন করবে ।*/
+
+function isBestFriend(a, b) {
+    if (typeof a != 'object' || a === NaN
+        || typeof b != 'object' || b === NaN) {
+        return 'Please enter two objects.';
+    } else if (Array.isArray(a) === true || Array.isArray(b) === true) {
+        return 'Please enter two objects.';
+    } else {
+        if (a.name === b.friend && b.name === a.friend) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+const obj1 = { name: 'ban', friend: 'ane' };
+const obj2 = { name: 'ane', friend: 'bane' };
+const obj3 = { name: 'bane', friend: 'ane' };
+const obj4 = { name: 'ane', friend: 'bane' };
+const obj5 = [ 'ane', 'bane' ];
+console.log(isBestFriend(obj1, obj2));
+console.log(isBestFriend(obj3, obj4));
+console.log(isBestFriend(obj3));
+console.log(isBestFriend(obj3, obj5));
