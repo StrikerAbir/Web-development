@@ -39,3 +39,28 @@ function oilPrice(diesel, petrol, octen) {
         return total;
     }
 }
+
+// Problem 4: publicBusFare
+
+function publicBusFare(people) {
+    const ticketPrice = 250;
+    let bus, micro, peopleBus, peopleMicro;
+     if (typeof people != 'number') {
+        return 'Please enter number of people.';
+     } else {
+         if (people % 50 === 0) {
+             return 0;
+         } else {
+             bus = parseInt(people / 50);
+             peopleBus = 50 * bus;
+         }
+         if ((people - peopleBus) % 11 === 0) {
+             return 0;
+         } else {
+             micro = parseInt((people - peopleBus) / 11);
+             peopleMicro = 11 * micro;
+         }
+         const cost = (people - (peopleBus + peopleMicro)) * 250;
+         return cost;
+     }
+ }
