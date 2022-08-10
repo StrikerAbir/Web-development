@@ -23,3 +23,19 @@ function isJavaScriptFile(file) {
         }
     }
 }
+
+// Problem 3: oilPrice
+
+function oilPrice(diesel, petrol, octen) {
+    const dieselPrice = 114;
+    const petrolPrice = 130;
+    const octenPrice = 135;
+    if (typeof diesel != 'number' ||  diesel === NaN
+        || typeof petrol != 'number' || petrol === NaN
+        || typeof octen != 'number' || octen === NaN) {
+        return 'Enter 3 numbers.';
+    } else {
+        const total = (diesel * dieselPrice) + (petrol * petrolPrice) + (octen * octenPrice);
+        return total;
+    }
+}
