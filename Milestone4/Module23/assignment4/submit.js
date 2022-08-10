@@ -9,3 +9,17 @@ function radianToDegree(radian) {
     }
 }
 
+// Problem:2  isJavaScriptFile
+
+function isJavaScriptFile(file) {
+    if (typeof file != 'string') {
+        return 'Please enter a file name';
+    } else {
+        const a = file.trim();
+        if (a.slice(a.length - 3, a.length) == '.js') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
