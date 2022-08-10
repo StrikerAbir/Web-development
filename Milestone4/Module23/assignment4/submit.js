@@ -1,7 +1,7 @@
 // Problem:1  radianToDegree
 
 function radianToDegree(radian) {
-    if (typeof radian !== 'number') {
+    if (typeof radian != 'number') {
         return 'Please enter a number';
     } else {
         const result = radian * (180 / Math.PI);
@@ -16,7 +16,7 @@ function isJavaScriptFile(file) {
         return 'Please enter a file name';
     } else {
         const a = file.trim();
-        if (a.slice(a.length - 3, a.length) == '.js') {
+        if (a.slice(a.length - 3, a.length) === '.js') {
             return true;
         } else {
             return false;
