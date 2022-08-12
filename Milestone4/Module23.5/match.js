@@ -30,4 +30,4 @@ function matchproduct(products, search) {
     }
     return matched;
 }
-console.log(matchproduct(products,'phone'))
+console.log(matchproduct(products, 'phone'))
