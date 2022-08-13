@@ -20,4 +20,4 @@ domcontainer.classList.add('yellow-bg'); //ekhane o/p gray e dekhasse cz yellow-
 
 
 domcontainer.classList.add('text-center');
-domcontainer.clas 
+domcontainer.classList.remove('large-text') 

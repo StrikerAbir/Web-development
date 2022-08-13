@@ -21,10 +21,10 @@ li.innerText = 'Brand new li added using createElement.'
 
 placesUl.appendChild(li); //appendChild dia placeUl er akta child add kora holo.
 
-const li2 = document.createElement('li');
-li2.innerText = 'another dynamic li added.';
+const lili = document.createElement('li');
+lili.innerText = 'another dynamic li added.';
 
-placesUl.appendChild(li2);
+placesUl.appendChild(lili);
 
 // parentNode
 console.log(placesUl.parentNode);
