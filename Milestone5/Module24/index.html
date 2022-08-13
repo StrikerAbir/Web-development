@@ -16,6 +16,9 @@
         .impo-places{
             color :blueviolet;
         }
+        .fruits-container li{
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +36,7 @@
                 <li>Dom Dom</li>
             </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruitstitle">fruits i like</h1>
             <ul>
                 <li>apple</li>
@@ -74,6 +77,7 @@
         for(const li of licollection){
             console.log(li.innerText);
         }*/
+        
         // open this for 24.3
     /*
     // getElementById
@@ -91,6 +95,21 @@
         console.log(place.innerText);
     }
     console.log(document.getElementsByClassName('places')); //class didnt used in html. it will give empty array type object.
+    */
+
+    // open this for 24.4
+    // querySelectorAll
+   /* console.log(document.querySelectorAll('#fruitstitle'))
+    console.log(document.querySelectorAll('.fruits-container'))
+    console.log(document.querySelectorAll('.fruits-container li'))
+
+    const someli= document.querySelectorAll('.fruits-container li');
+    for(const li of someli){
+        console.log(li);
+        console.log(li.innerText);
+    }
+    // querySelector
+    console.log(document.querySelector('.fruits-container li')) //only show first list
     */
 
 

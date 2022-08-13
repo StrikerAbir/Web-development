@@ -1,3 +1,4 @@
+// 24.2
 /*console.log('hello tishu my love');
 console.log(document);
 console.log(document.body);
@@ -27,6 +28,8 @@ for (const li of licollection) {
     console.log(li.innerText);
 }*/
 
+
+// 24.3
 /*
     // getElementById
     console.log(document.getElementById('fruitstitle'));
@@ -44,3 +47,19 @@ for (const li of licollection) {
     }
     console.log(document.getElementsByClassName('places')); //class didnt used in html. it will give empty array type object.
     */
+
+
+    // 24.4
+    /*
+console.log(document.querySelectorAll('#fruitstitle'))
+console.log(document.querySelectorAll('.fruits-container'))
+console.log(document.querySelectorAll('.fruits-container li'))
+
+const someli = document.querySelectorAll('.fruits-container li');
+for (const li of someli) {
+    console.log(li);
+    console.log(li.innerText);
+}
+// querySelector
+console.log(document.querySelector('.fruits-container li')) //only show first list
+*/
