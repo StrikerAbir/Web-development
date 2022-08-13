@@ -8,10 +8,31 @@
 </head>
 <body>
     <h1>DOM er special Event</h1>
-    <button onclick="console.log(3)">click me</button> 
-    <!--* it will give output in inspact console -->
+    <button onclick="console.log(3)">click me</button> <!--* it will give output in inspact console -->
     <button onclick="console.log(30)">another one</button>
     <button onclick="console.log('go go anime')">another two</button>
+    <br>
+    <!-- 25.2 -->
+    <!-- system one (direct action)-->
+    <button onclick="document.body.style.backgroundColor='yellow'">Make yellow</button>
+    <!-- system two (call by function)--> 
+    <button onclick="makered()">Make red</button>
+    <!-- system three (use id and getelementid then function) -->
+    <button id="green">Make green</button>
+    <!-- system three another  -->
+    <button id="blue">make blue</button>
+    <script>
+        // function makered() {
+        //     document.body.style.backgroundColor='red';
+        // }
+
+        // const makebluebutton= document.getElementById('green');
+        // console.log('makebluebutton');
+        // makebluebutton.onclick = green; //ekhane onclick green() function letkha hoini. eta likhle akbare kaj hoa age theke green screen set hoa jeto. tai onlick a set kora hoise green function nam ta. 
+        // function green(){
+        //     document.body.style.backgroundColor='green';
+        // }
+    </script>
     <script src="./js/event.js"></script>
 </body>
 </html>
