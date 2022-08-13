@@ -22,11 +22,36 @@
             <li>jalali set</li>
             <li>shafayet</li>
             <li>bonobash</li>
+            <li>Dom Dom</li>
+        </ul>
+        <ul>
+            <li>apple</li>
+            <li>mango</li>
+            <li>nut</li>
         </ul>
     </main>
     <script src="dom.js"></script>
     <script>
-        console.log('inside the Html')
+       /* const student ={
+            name: 'abul',
+            id:11,
+            study: function(time){
+                console.log(time,'study running')
+            }
+        }
+        // eta console a lekho page er.
+        // student.study(5); 
+        // document.getElementsByTagName('h1');
+        // document.getElementsByTagName('li');
+        console.log('inside the Html'); */
+        const licollection = document.getElementsByTagName('li');
+        console.log(licollection);
+        for(const li of licollection){
+            console.log(li);
+        }
+        for(const li of licollection){
+            console.log(li.innerText);
+        }
     </script>
 </body>
 </html>
