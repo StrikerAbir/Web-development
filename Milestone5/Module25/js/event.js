@@ -1,6 +1,6 @@
 console.log('this is separate js file');
 
-// system two(call by function)
+// system two(call by function) mostly used
 function makered() {
     document.body.style.backgroundColor = 'red';
 }
@@ -17,3 +17,20 @@ const makeblue = document.getElementById('blue');
 makeblue.onclick = function blue() {
     document.body.style.backgroundColor = 'blue';
 }
+
+//25.3
+// system four(use id and addEventListener())
+const makepink = document.getElementById('pink');
+makepink.addEventListener('click', pink)
+function pink() {
+    document.body.style.backgroundColor = 'pink';
+}
+// four another
+const makeorange = document.getElementById('orange');
+makeorange.addEventListener('click', function orange() {
+    document.body.style.backgroundColor = 'orange';
+})
+// four final(mostly used)
+document.getElementById('purple').addEventListener('click', function purple() {
+    document.body.style.backgroundColor = 'purple';
+})
