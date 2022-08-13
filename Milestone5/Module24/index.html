@@ -10,28 +10,50 @@
         li{
             color :red;
         }
+        #fruitstitle{
+            color : black;
+        }
+        .impo-places{
+            color :blueviolet;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my dom</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt consectetur magnam deleniti, praesentium iste harum asperiores beatae amet ipsam aspernatur impedit culpa ad obcaecati quibusdam nam eos? Enim, veritatis cupiditate.</p>
     </header>
     <main>
-        <h1>My Awesome Dom </h1>
-        <ul>
-            <li>jalali set</li>
-            <li>shafayet</li>
-            <li>bonobash</li>
-            <li>Dom Dom</li>
-        </ul>
-        <ul>
-            <li>apple</li>
-            <li>mango</li>
-            <li>nut</li>
-        </ul>
+        <section>
+            <h1>My Awesome Dom </h1>
+            <ul>
+                <li>jalali set</li>
+                <li>shafayet</li>
+                <li>bonobash</li>
+                <li>Dom Dom</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruitstitle">fruits i like</h1>
+            <ul>
+                <li>apple</li>
+                <li>mango</li>
+                <li>nut</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="placestitle">places i like to visit</h1>
+            <ul>
+                <li class="impo-places">sundorban</li>
+                <li class="impo-places">kataban</li>
+                <li class="impo-places">maruban</li>
+                <li>butterban</li>
+            </ul>
+        </section>
     </main>
     <script src="dom.js"></script>
     <script>
+        // open this for 24.2 and 24.3
        /* const student ={
             name: 'abul',
             id:11,
@@ -43,7 +65,7 @@
         // student.study(5); 
         // document.getElementsByTagName('h1');
         // document.getElementsByTagName('li');
-        console.log('inside the Html'); */
+        console.log('inside the Html'); 
         const licollection = document.getElementsByTagName('li');
         console.log(licollection);
         for(const li of licollection){
@@ -51,7 +73,25 @@
         }
         for(const li of licollection){
             console.log(li.innerText);
-        }
+        }*/
+   
+    /*
+    // getElementById
+    console.log(document.getElementById('fruitstitle'));
+    console.log(document.getElementById('placestitle'));
+    console.log(document.getElementById('placestitle').innerText); //inner text select
+    console.log(document.getElementById('placestitle').innerText='my tour list'); //inner text changed.
+    console.log(document.getElementById('fruit')); //id didnt used in html. it will give null.
+
+    // getElementsByClassName
+    console.log(document.getElementsByClassName('impo-places'));
+    const places= document.getElementsByClassName('impo-places');
+    for(const place of places){
+        console.log(place);
+        console.log(place.innerText);
+    }
+    console.log(document.getElementsByClassName('places')); //class didnt used in html. it will give empty array type object.
+    */
     </script>
 </body>
 </html>
