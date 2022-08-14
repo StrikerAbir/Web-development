@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>Explore event delegate</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Soluta, voluptatem debitis.</li>
+            <li class="item">Enim, suscipit distinctio?</li>
+            <li class="item">Veritatis, accusamus ut.</li>
+            <li class="item">Laborum, aliquid dolor.</li>
+            <li class="item">Id, rerum? Eum!</li>
+        </ul>
+        <button id="btn-item">add item</button>
+        <script>
+            const items= document.getElementsByClassName('item');
+            console.log(items);
+            //one way to get items
+           /* for(const item of items){
+                item.addEventListener('click',function(){
+                    console.log(item);
+                })//proti item a event listener add kore dewa hosse. click korle o/p paboo.
+            }*/
+            //another way to get item 
+            /*for (const item of items) {
+                    item.addEventListener('click', function (event) {
+                        console.log(event.target);// ager motoi o/p pabo
+                         console.log(event.target.parentNode);//eta target er parent k dekhabe.
+                    })
+                }*/
+            // item remove.
+           /* for (const item of items) {
+                item.addEventListener('click', function (event) {
+                   event.target.parentNode.removeChild(event.target);//jeta te click korbo tar parant k gia bolbe j target item ta remove korte.
+                })
+            }*/
+            // solved part
+            document.getElementById("list-container").addEventListener('click', function (event){
+                console.log(event.target);
+                event.target.parentNode.removeChild(event.target);
+                // ekhane event delegate kora hoise. mane age li remove j kaj ta kora hoise seta silo li base. seta k tar parant ul list container base kora holo.
+            })
+
+            //add items
+            document.getElementById('btn-item').addEventListener('click',function(){
+                const listcontainer=document.getElementById('list-container');
+                const li=document.createElement('li');
+                li.innerText='brand new item';
+                li.classList.add('item');
+                listcontainer.appendChild(li);
+                //page a li add korar por sta remove hobe na, karon remove er code ei li er jonner call hobe na. tai remover er nicher sovled part korte hobe.
+            })
+        </script>
+    </section>
+</body>
+</html>
