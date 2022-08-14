@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summery : event handler</title>
+</head>
+<body>
+    <h1>explore dom events</h1>
+    <button onclick="makegreen()">make green</button>
+    <button id="makeyellow">make yellow</button>
+    <br>
+    <input type="email" name="" id="user-email">
+    <script>
+        // option 1
+        function makegreen(){
+            document.body.style.backgroundColor='green'
+        }
+        // option 2
+        document.getElementById('makeyellow').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'yellow';
+        })
+
+        document.getElementById('user-email').addEventListener('keyup',function(event){
+            console.log(event.target.value)
+        })
+    </script>
+</body>
+</html>
