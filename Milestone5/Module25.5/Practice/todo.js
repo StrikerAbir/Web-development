@@ -51,8 +51,9 @@ document.getElementById('submit').addEventListener('click', function () {
         })
     }
     // clear all 
-    document.getElementById('clearall').addEventListener('click', function (event) {
-        event.target.parentNode.style.display = 'none';
+    document.getElementById('clearall').addEventListener('click', function () {
+        const content = document.getElementById('content');
+        content.style.display = 'none';
     })
 })
 
