@@ -1,2 +1,3 @@
-console.log('deposit');
-console.log(hi)
+document.getElementById('btn-deposit').addEventListener('click', function () {
+    
+})
