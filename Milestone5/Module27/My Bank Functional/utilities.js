@@ -1,6 +1,5 @@
 function getInputFieldValueId(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
-    console.log('in1')
     const inputFieldValueString = inputField.value;
     if (inputFieldValueString == '') {
         alert('Please enter Amount.')
@@ -13,7 +12,6 @@ function getInputFieldValueId(inputFieldId) {
 }
 
 function getElementValueId(elementId) {
-    console.log('in2')
     const textElement = document.getElementById(elementId);
     const elementValueString = textElement.innerText;
     const previousValue = parseFloat(elementValueString);
@@ -21,7 +19,6 @@ function getElementValueId(elementId) {
 }
 
 function setTextElementValueId(elementId, newValue) {
-    console.log('in3')
     const textElement = document.getElementById(elementId);
     textElement.innerText = newValue;
 }
