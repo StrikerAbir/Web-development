@@ -1,7 +1,7 @@
 // only number and operator are allowed in input
 function onlyNumberInput(event) {
     const text = event.charCode;
-    if ((text >= 48 && text <= 57) || text == 47 || text == 42 || text == 43 || text == 45) {
+    if ((text >= 48 && text <= 57) || text == 47 || text == 42 || text == 43 || text == 45 || text ==46) {
         return true;
     } else if (text == 13) {
         // This is for enter key press. and show result
