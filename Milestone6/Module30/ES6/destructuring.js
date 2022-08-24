@@ -25,6 +25,12 @@ console.log(job)
 const { address } = fish;
 console.log(address)
 
+// dhora jak x1,y1 ei duita declear korlam but baki gula ami onno akta variable a rakhbo tokhn eta kora jai.
+const { x1, y1, ...more } = { x1: 45, y1: 12, z: 14, name: 'atik', };
+console.log(x1)
+console.log(y1)
+console.log(more) // baki tuku object hisabe more er moddhe theke gelo
+
 // ! array destructuring
 
 // variable name ja ta dewa jai
