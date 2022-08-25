@@ -21,3 +21,14 @@ const subject='math'
 //const marks2=subject.marks.subject //*eta error dekahbe karon subject kono key na ba property na, eta akta variable. tai se eta khuje pabe na.. ejonnno nicher ta kore hoi variable dia.
 const subjectMark = student.marks[subject] //eveabe korete hobe.
 console.log(subjectMark)
+
+
+//another way to access property.
+const product = {
+    name: 'Laptop',
+    model: 'Yoga 3',
+    price: 49000,
+    dusk: '512SSD'
+}
+const { price } = product
+console.log(price)
