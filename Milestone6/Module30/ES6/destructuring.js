@@ -22,8 +22,8 @@ console.log(nam)
 console.log(age)
 console.log(job)
 
-const { address } = fish;
-console.log(address)
+const { address: add } = fish; //adress key k add dia new variable banalam
+console.log(add)
 
 // dhora jak x1,y1 ei duita declear korlam but baki gula ami onno akta variable a rakhbo tokhn eta kora jai.
 const { x1, y1, ...more } = { x1: 45, y1: 12, z: 14, name: 'atik', };
