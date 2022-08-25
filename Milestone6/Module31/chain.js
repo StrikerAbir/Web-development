@@ -36,3 +36,8 @@ console.log(user.address.street.third)
 //optional chaining '?'
 //eta use hoi chain ta stop korte. jmn ager line er stree er pore ? dile okhane jokhn value peto na tokh okhanei theme o/p undefined pabe, next key te jabe na.
 console.log(user.address.stree?.third)
+
+const c = 9;
+const d = 7
+const f = (c > d) ? 'c soto' : 'd boro';
+console.log(f)
