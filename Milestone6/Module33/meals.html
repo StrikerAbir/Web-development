@@ -14,14 +14,22 @@
   </head>
   <body>
     <header>
-      <h1>Explore Food</h1>
+      <h1 class="text-center text-warning">Explore Food</h1>
     </header>
     <main>
-      <section>
+      <section class=" container d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          id="search-field"
+        />
+        <button class="btn btn-outline-success" type="submit" onclick="searchFood()">Search</button>
+      </section>
+      <section class="container">
         <h2>My meals</h2>
-        <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4">
-          
-        </div>
+        <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
       </section>
     </main>
     <script
