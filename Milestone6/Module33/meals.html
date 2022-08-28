@@ -17,7 +17,7 @@
       <h1 class="text-center text-warning">Explore Food</h1>
     </header>
     <main>
-      <section class=" container d-flex">
+      <section class="container d-flex">
         <input
           class="form-control me-2"
           type="search"
@@ -25,10 +25,22 @@
           aria-label="Search"
           id="search-field"
         />
-        <button class="btn btn-outline-success" type="submit" onclick="searchFood()">Search</button>
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          onclick="searchFood()"
+        >
+          Search
+        </button>
       </section>
       <section class="container">
-        <h2>My meals</h2>
+        <h2>Meal Details</h2>
+        <div id="detail-container" style="width: 18rem">
+
+        </div>
+      </section>
+      <section class="container">
+        <h2>My Meals</h2>
         <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
       </section>
     </main>
