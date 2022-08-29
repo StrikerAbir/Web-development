@@ -16,7 +16,7 @@ const loadUserAsync = async () => {
     } catch (err) {
         console.log(err)
     }
-   
+    
 }
 const displayUser = (data) => {
     console.log(data);
