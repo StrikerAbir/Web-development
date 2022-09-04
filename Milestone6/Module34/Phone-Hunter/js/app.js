@@ -96,6 +96,7 @@ const loadDetails = async (id) => {
     displayDetails(data.data);
 }
 const displayDetails = (data) => {
+    console.log(data);
     const title = document.getElementById('detailsModalLabel');
     title.innerHTML = `<h4>${data.name}</h4> 
     <p><strong>${data.brand}</strong></p>`
@@ -120,4 +121,38 @@ const displayDetails = (data) => {
             </div>
         </div>
     `
+}
+
+
+
+
+// full details in modal
+const loadFullDetails = (id) => {
+    const url = `https://openapi.programming-hero.com/api/news/${id}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => displayFullDetails(data.data))
+        .catch(err => console.error(err));
+}
+
+const displayFullDetails = (data) => {
+    // console.log(data);
+    // data.forEach((d) => {
+    //     const modal = document.getElementById('modal-body');
+    //     modal.innerHTML = ``;
+    //     const div = document.createElement('div');
+    //     div.classList.add('modal')
+    //     div.innerHTML = `
+    //         <div class="modal-box relative bg-sky-100">
+    //           <label
+    //             for="my-modal-3"
+    //             class="btn btn-sm btn-circle border-sky-500 bg-red-600 text-white absolute right-2 top-2"
+    //             >✕</label
+    //           >
+    //           <h3 class="text-lg font-bold">${d.title}</h3>
+    //           <p class="py-4">${d.details}</p>
+    //         </div>
+    //     `
+    //     modal.appendChild(div);
+    // })
 }

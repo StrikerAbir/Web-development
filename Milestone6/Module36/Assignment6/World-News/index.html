@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World News</title>
+    <link rel="shortcut icon" href="./images/worldnews.png" />
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/99bc7f2386.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tailwind elements -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans - serif"],
+              mono: ["Bebas Neue", "cursive"],
+            },
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- header part -->
+    <header class="container mx-auto">
+      <nav class="bg-sky-500 px-2 sm:px-4 py-2.5 font-sans text-black">
+        <div
+          class="container flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="#" class="flex items-center">
+            <img
+              src="./images/worldnews.png"
+              class="mr-3 h-6 sm:h-9"
+              alt="worldnews Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap font-mono tracking-widest"
+              >World</span
+            >
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap ml-1 text-white bg-red-600 px-1 rounded-md"
+              >News</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-black rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-red-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="flex flex-col items-center py-3 px-4 mt-4 bg-sky-500 rounded-lg border-2 border-red-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-sky-500"
+            >
+              <li id="news">
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-black rounded hover:bg-sky-300 md:hover:bg-transparent md:border-0 md:p-0 font-bold"
+                  aria-current="page"
+                  >News</a
+                >
+              </li>
+              <li id="blogs-btn">
+                <a
+                  href="#blogs"
+                  class="block py-2 pr-4 pl-3 text-black rounded hover:bg-sky-300 md:hover:bg-transparent md:border-0 md:p-0 font-bold"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-black rounded hover:bg-sky-300 md:hover:bg-transparent md:border-0 md:p-0 font-bold"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-black rounded hover:bg-sky-300 md:hover:bg-transparent md:border-0 md:p-0 font-bold"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <img src="./images/Avatar.png" alt="" class="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main part -->
+    <main class="container mx-auto bg-sky-200 py-7 text-black">
+      <!-- categories section -->
+      <section class="mb-16">
+        <!-- categories -->
+        <div
+          id="categories-container"
+          class="grid xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-2 gap-2 border-2 border-sky-500 mx-3 rounded mb-10"
+        ></div>
+
+        <!-- news count field -->
+        <div class="flex justify-center">
+          <h1 id="total-news" class="w-5/6 bg-sky-100 rounded pl-9 py-4"></h1>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <section>
+        <!-- short by part -->
+        <div class="flex justify-between pb-7 mx-10 mb-7">
+          <div class="sm:flex">
+            <h5>Sort By View:</h5>
+            <div class="flex bg-sky-100 px-2 rounded ml-2">
+              <div class="mr-2">
+                <small class="text-gray-400">Default</small>
+              </div>
+              <img src="./images/cheveron-down.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <button class="px-7 bg-red-600 text-white rounded-lg">
+              Trending
+            </button>
+          </div>
+        </div>
+
+        <!-- Loading spinner -->
+        <div id="loader" class="mb-7 hidden">
+          <div class="flex items-center justify-center">
+            <strong> Loading...</strong>
+            <div
+              class="text-blue-400 spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full ml-2"
+              role="status"
+            ></div>
+          </div>
+        </div>
+
+        <!-- not found -->
+        <div id="not-found" class="mb-7 hidden">
+          <h1 class="text-2xl font-bold text-center">No News Found</h1>
+        </div>
+
+        <!-- News -->
+        <div id="news-container" class="grid grid-cols-1 gap-3 pt-7 mx-2"></div>
+      </section>
+
+      <section>
+        <!-- Modal -->
+        <div
+          class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+          id="exampleModalScrollable"
+          tabindex="-1"
+          aria-labelledby="exampleModalScrollableLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-scrollable relative w-auto pointer-events-none"
+          >
+            <div
+              class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-clip-padding rounded-md outline-none text-current"
+            >
+              <div
+                class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md bg-sky-200"
+              >
+                <h5
+                  class="text-xl font-medium leading-normal text-gray-800"
+                  id="exampleModalScrollableLabel"
+                >
+                  Details News
+                </h5>
+                <button
+                  type="button"
+                  class="border-2 border-sky-500 bg-red-600 px-2 py-1 rounded-full text-white font-bold"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ✕
+                </button>
+              </div>
+              <div
+                id="modal-body"
+                class="modal-body relative p-4 bg-sky-200"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- blog part -->
+      <!-- appres when blogs clicked -->
+      <section id="blogs" class="my-24 hidden">
+        <div class="mb-7">
+            <h2 class="text-center text-2xl font-bold">Random Blogs</h2>
+          </div>
+        <div class="flex justify-center">
+          <div id="accordion-collapse" data-accordion="collapse" class="w-5/6">
+            <!-- one -->
+            <h2 id="accordion-collapse-heading-1">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0 rounded-t-xl text-black border-red-600 bg-sky-200 focus:bg-sky-500 focus:text-white"
+                data-accordion-target="#accordion-collapse-body-1"
+                aria-expanded="false"
+                aria-controls="accordion-collapse-body-1"
+              >
+                <span>What is difference between var, let and const?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-1"
+              class="hidden"
+              aria-labelledby="accordion-collapse-heading-1"
+            >
+              <div
+                class="p-5 font-light border-2 border-b-0 border-red-600 bg-sky-100"
+              >
+                <p class="mb-2">
+                  Var: We can use it anywhere. It has some problems too. We can
+                  redeclare it. It can be an accidental global variable. That's
+                  why to avoid problems they created two other variable systems.
+                  Let and Const.
+                </p>
+                <p class="mb-2">
+                  Let: It allows that variable to change. Just like var. But it
+                  s ES6 version and have some difference.
+                </p>
+                <p class="mb-2">
+                  Const: It doesn't allow to change of variables. Making
+                  variable constant.
+                </p>
+              </div>
+            </div>
+            <!-- two -->
+            <h2 id="accordion-collapse-heading-2">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0 rounded-t-xl text-black border-red-600 bg-sky-200 focus:bg-sky-500 focus:text-white"
+                data-accordion-target="#accordion-collapse-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-collapse-body-2"
+              >
+                <span
+                  >What is difference between Array Functions and Regular
+                  Function?</span
+                >
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-2"
+              class="hidden"
+              aria-labelledby="accordion-collapse-heading-2"
+            >
+              <div
+                class="p-5 font-light border-2 border-b-0 border-red-600 bg-sky-100"
+              >
+                <p class="mb-2">
+                  Arrow function a single operation er jonner kono return ba 2nd
+                  bracket lage na. Reguler a lage eta Arrow functions don't have
+                  their own ‘this Regular function have their own ‘this’ Arrow
+                  Give error if parameter name same Regular don’t give this
+                  error
+                </p>
+              </div>
+            </div>
+            <!-- three -->
+            <h2 id="accordion-collapse-heading-3">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0 rounded-t-xl text-black border-red-600 bg-sky-200 focus:bg-sky-500 focus:text-white"
+                data-accordion-target="#accordion-collapse-body-3"
+                aria-expanded="false"
+                aria-controls="accordion-collapse-body-3"
+              >
+                <span>What is map, foreach, filter and find?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-3"
+              aria-labelledby="accordion-collapse-heading-3"
+              class="hidden"
+            >
+              <div
+                class="p-5 font-light border-2 border-b-0 border-red-600 bg-sky-100"
+              >
+                <p class="mb-2">
+                  Map() function: this function only works on array. map()
+                  function have call back function, that execute on every
+                  element of an array. And it returns a new array.
+                </p>
+                <p class="mb-2">
+                  Foreach() function: this function only works on array.
+                  foreach() function have call back function, that execute on
+                  every element of an array. And it doesn't returns any array.
+                </p>
+                <p class="mb-2">
+                  Filter() function: this function only works on array. Same
+                  type of map. It returns an array. Its call back function have
+                  conditions, when condition is true it returns value.
+                </p>
+                <p class="mb-2">
+                  Find() function: this function only works on array. Same type
+                  of filter. It returns an array. Its call back function have
+                  conditions, when condition is true it returns only first value
+                  that true.
+                </p>
+              </div>
+            </div>
+            <!-- four -->
+            <h2 id="accordion-collapse-heading-4">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full p-5 font-medium text-left border-2 border-b-0 rounded-t-xl text-black border-red-600 bg-sky-200 focus:bg-sky-500 focus:text-white"
+                data-accordion-target="#accordion-collapse-body-4"
+                aria-expanded="true"
+                aria-controls="accordion-collapse-body-4"
+              >
+                <span>Why we use template string?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0 rotate-180"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-4"
+              aria-labelledby="accordion-collapse-heading-4"
+              class=""
+            >
+              <div
+                class="p-5 font-light border-2 border-b-0 border-red-600 bg-sky-100"
+              >
+                <p class="mb-2">
+                  Template string is very powerful. We can use dynamic value inside template string. This is enough reason to use template string.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- script link -->
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="world.js"></script>
+  </body>
+</html>
