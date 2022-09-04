@@ -9,6 +9,16 @@ const loadTemp = city => {
 
 const displayTemp = (data) => {
     const temperature = document.getElementById('temp');
-    temperature.innerText=`${data.main.temp}`
+    temperature.innerText = `${data.main.temp}`
+    const city = document.getElementById('city');
+    city.innerText = data.name;
+    const weatheR = document.getElementById('weather');
+    weatheR.innerText = `${data.weather[0].main}`;
 }
-loadTemp('dhaka');
+
+
+document.getElementById('search-btn').addEventListener('click', function () {
+    const searchField = document.getElementById('search-field').value;
+    loadTemp(searchField);
+    
+})
