@@ -42,3 +42,15 @@ const display = () => {
 display();
 
 //! level 3 task
+
+// set data to localStorage
+const addButton = (id) => {
+    const value = document.getElementById(id).value;
+    localStorage.setItem(id, value);
+}
+const deleteButton = (id) => {
+    localStorage.removeItem(id);
+}
+const clearButton = () => {
+    localStorage.clear();
+}
