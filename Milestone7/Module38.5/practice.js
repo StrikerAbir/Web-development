@@ -54,3 +54,34 @@ const deleteButton = (id) => {
 const clearButton = () => {
     localStorage.clear();
 }
+
+// ! level 4 task
+const getInput = id => {
+    const inputField = document.getElementById(id);
+    const input = inputField.value;
+    inputField.value = '';
+    return input;
+}
+const saveButton = () => {
+    const name = getInput('name2');
+    const email = getInput('email2');
+    const msg = getInput('msg2');
+    
+    setValue(name, email, msg);
+}
+const getLocalStorageDetails = () => {
+    let details = localStorage.getItem('details');
+    let newDetails = {};
+    if (details) {
+        newDetails = JSON.parse(details);
+    }
+    return newDetails;
+}
+const setValue = (name, email, msg) => {
+    const detail= getLocalStorageDetails();
+    detail['name']=name;
+    detail['email']=email;
+    detail['msg'] = msg;
+    const detailString = JSON.stringify(detail);
+    localStorage.setItem('details', detailString);
+}
