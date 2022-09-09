@@ -13,4 +13,3 @@ const name = 'bane';
 // greetings(name);
 greetings(greetingHandler, name);
 greetings(greetingEvening, name);
-
