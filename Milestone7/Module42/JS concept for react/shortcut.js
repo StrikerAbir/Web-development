@@ -26,3 +26,13 @@ isActive || hideUser();
 
 // toggle boolean
 isActive=!isActive;
+
+// object shortcut
+const x = 50;
+const y = 60;
+const obj = {
+    x: x,
+    y: y,
+}
+// shortcut
+const obj1={x,y}
