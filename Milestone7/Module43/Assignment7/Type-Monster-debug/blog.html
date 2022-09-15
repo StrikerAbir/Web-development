@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Monster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="box-container">
+      <h1 class="bold color spaceTitle">Blogs</h1>
+      <div class="btn">
+      <a class="color btn-style" href="index.html">Home</a>
+    </div>
+      <article class="blog">
+        <h3>Differences between Local storage and Session storage?</h3>
+        <div>
+          <p class="space">
+            <span class="bold">LocalStorage: </span>This read-only interface
+            property provides access to the Document's local storage object, the
+            stored data is stored across browser sessions. If we set any data in
+            localStorage it will be stored there unless we delete it. If we
+            close tab, even close the browser localStorage data always stored.
+            In short, localStorage sets data permanently.
+          </p>
+          <p class="space">
+            <span class="bold">SessionStorage: </span>Session Storage objects
+            can be accessed using the sessionStorage read-only property. The
+            difference between sessionStorage and localStorage is that
+            localStorage data does not expire, whereas sessionStorage data is
+            cleared when the page session ends. In short, sessionStorage sets
+            data temporarily.
+          </p>
+        </div>
+      </article>
+
+      <article class="blog">
+        <h3>Differences between Global scope and local scope variable?</h3>
+        <div>
+          <p class="space">
+            <span class="bold">Global scope: </span> Global scope contains all
+            of the things defined outside of all code blocks. A code block
+            simply consists of grouped statements inside curly braces ({ }). if
+            statement, loops, function are examples of structure that create a
+            code block. A global variable has global scope. A global variable is
+            accessible from anywhere in the code.
+          </p>
+          <p class="space">
+            <span class="bold">Local scope: </span> Local scope contains things
+            defined inside code blocks. A local variable has local scope. A
+            local variable is only accessible where it's declared.
+          </p>
+        </div>
+      </article>
+
+      <article class="blog">
+        <h3>How eventLoop works in JavaScript?</h3>
+        <div>
+          <p class="space">JavaScript is single threaded but can works asynchronously because of the event loop. The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process. </p>
+          <p>Event loop=> call stack =><= event queue => event loop</p>
+        </div>
+      </article>
+
+      <article class="blog">
+        <h3>How many ways we can get undefined?</h3>
+        <div>
+          <p class="space">There are 8 ways to get undefined</p>
+          <li>variable that is not initialized will give undefined.</li>
+          <li>function with no return</li>
+          <li>function parameter that is not passed will be undefined</li>
+          <li>if return has nothing on the right side will return undefined.</li>
+          <li> property that doesn't exists on an object will give you undefined.</li>
+          <li> accessing array elements outside of the index range</li>
+          <li>deleting an element inside an array</li>
+          <li>set a value directly to undefined.</li>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
