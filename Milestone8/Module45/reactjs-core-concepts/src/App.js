@@ -29,21 +29,25 @@ function App() {
           }}>Name: {singer2.name}, { singer2.job }</p>
         </div>   
       </header> */}
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      <Person name='bane' nayka='banu'></Person>
+      <Person name='popo' nayka='popu'></Person>
+      <Person name='banerange' nayka='hululu'></Person>
       <h3>New component</h3>
-      <Friend></Friend>
+      <Friend name='banerange pungaranga' phone='+1234'></Friend>
+      <Friend name='banbanti vaijan' phone='+2354'></Friend>
     </div>
   );
 }
 
-function Person() {
+function Person(props) {
+  // console.log(props);
   return (
     //way 1
     <div className='person'>
-      <h1>Sakib al Hasan</h1>
-      <p>profession: cricketer</p>
+      {/* <h1>Sakib al Hasan</h1> */}
+      <h1>{props.name}</h1>
+      {/* <p>profession: cricketer</p> */}
+      <p>nayka: {props.nayka}</p>
     </div>
 
     //way 2
@@ -54,11 +58,14 @@ function Person() {
   )
 }
 
-function Friend() {
+function Friend(props) {
+  console.log(props);
   return (
     <div className='container'>
-      <h3>Name: Banerangne pungaranga</h3>
-      <p>Job: Kisu parena.</p>
+      {/* <h3>Name: Banerangne pungaranga</h3> */}
+      <h3>Name: { props.name}</h3>
+      {/* <p>Job: Kisu parena.</p> */}
+      <p>phone: { props.phone }</p>
     </div>
   )
 }
