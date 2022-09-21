@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Countries from './components/Countries/Countries';
 import Person from './components/Person/Person';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -11,8 +12,10 @@ function App() {
       {/* <Load></Load> */}
       {/*
       <Person></Person>
-      <Header></Header> */}
+       */}
+      <Header></Header>
       <Countries></Countries>
+      <Footer></Footer>
     </div>
   );
 }

@@ -3,12 +3,12 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className='bg-warning'>
             <h2>Welcome to my react website</h2>
             <nav className='menu'>
-                <a href="/home">HOME</a>
-                <a href="/shop">Shop</a>
-                <a href="/about">About</a>
+                <a className='btn btn-primary' href="/home">HOME</a>
+                <a className='btn btn-primary' href="/shop">Shop</a>
+                <a className='btn btn-primary' href="/about">About</a>
             </nav>
         </div>
     );
