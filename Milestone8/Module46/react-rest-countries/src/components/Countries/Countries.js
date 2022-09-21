@@ -14,7 +14,9 @@ const Countries = () => {
             <h2>Countries in other file.</h2>
             <h2>Total countries: {countries.length}</h2>
             {
-                countries.map(country => <Country name={country.name.common} population={country.population} area={country.area} flag={country.flags.png}></Country>)
+                countries.map(country => <Country
+                    country={country}
+                ></Country>)
             }
         </div>
     );
