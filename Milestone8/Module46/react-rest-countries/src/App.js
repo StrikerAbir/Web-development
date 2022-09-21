@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App">
       {/* <Load></Load> */}
-      <Countries></Countries>
+      {/*
       <Person></Person>
-      <Header></Header>
+      <Header></Header> */}
+      <Countries></Countries>
     </div>
   );
 }
