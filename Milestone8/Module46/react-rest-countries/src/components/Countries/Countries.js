@@ -12,7 +12,7 @@ const Countries = () => {
     // console.log(countries);
     return (
         <div >
-            <h2>Countries in other file.</h2>
+            <h2>Countries in World</h2>
             <h2>Total countries: {countries.length}</h2>
             <div className='countries-container'>
                 {
