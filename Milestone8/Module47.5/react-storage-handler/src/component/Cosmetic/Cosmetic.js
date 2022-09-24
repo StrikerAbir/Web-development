@@ -1,11 +1,19 @@
 import React from 'react';
-
+import './Cosmetic.css'
 const Cosmetic = (props) => {
-    const {age,name}= props.cosmetic
+    const { age, name,id } = props.cosmetic
+    const addToCart = (id)=>{
+        console.log('item added', id);
+    }
+    const addPara = () => addToCart(id);
     return (
-        <div>
+        <div className='product'>
             <h1>Cosmetics</h1>
-            <p>only for : {name} { age }</p>
+            <p>only for : {name} {age}</p>
+            <button onClick={addPara}>Add to Cart</button>
+            {/* shortcut onclick with para */}
+            <button onClick={()=>addToCart(id)}>Add to Cart</button>
+            
         </div>
     );
 };
