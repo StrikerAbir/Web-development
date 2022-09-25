@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { total } from '../../Utilities/calculate';
 import Cosmetic from '../Cosmetic/Cosmetic';
 // import { add } from '../../Utilities/calculate';
 // import add from '../../Utilities/calculate';
@@ -54,10 +55,14 @@ const Cosmo = () => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCos(data));
-    },[])
+    }, [])
+    
+    const totalPrice = total(cos);
+
     return (
         <div>
             <h2>COsmo</h2>
+            <p>money total: { totalPrice}</p>
             {/* <p>total: { total }</p> */}
             {
                 cos.map(cosmetic=> <Cosmetic key={cosmetic.id} cosmetic={cosmetic}></Cosmetic>)
