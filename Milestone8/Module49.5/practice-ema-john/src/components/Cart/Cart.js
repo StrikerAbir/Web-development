@@ -1,14 +1,19 @@
 import React from 'react';
-
-const Cart = () => {
+import './Cart.css'
+const Cart = ({cart}) => {
+    const priceTotal = cart.reduce((prev, cur) => prev + cur.price, 0);
+    const shippingTotal = cart.reduce((prev, cur) => prev + cur.shipping, 0);
+    const tax = (priceTotal * 0.1).toFixed(2);
+    const grandTotal= priceTotal+shippingTotal+parseFloat(tax)
     return (
-        <div>
-            <p>Selected item: </p>
-            <p>Total Price: </p>
-            <p>Total Shipping: </p>
-            <p>Tax: $ </p>
-            <h5>Grand Total:</h5>
-        </div>
+      <div className='cart-details'>
+        <h2>Order Summery</h2>
+        <p>Selected item: {cart.length}</p>
+        <p>Total Price: {priceTotal}</p>
+        <p>Total Shipping: {shippingTotal}</p>
+        <p>Tax: $ {tax}</p>
+        <h5>Grand Total: {grandTotal.toFixed(2)}</h5>
+      </div>
     );
 };
 
