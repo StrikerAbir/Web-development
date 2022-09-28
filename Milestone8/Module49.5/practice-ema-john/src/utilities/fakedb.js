@@ -20,4 +20,4 @@ const addToDb = id => {
     }
     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 }
-export {addToDb}
+export {addToDb,getStoredCart}
