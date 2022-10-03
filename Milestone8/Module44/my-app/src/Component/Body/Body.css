@@ -1,0 +1,35 @@
+.body-container{
+    background-color: #e0e6a1;
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+.head-sports{
+    padding-top:40px;
+}
+.sports-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+    margin: 0 50px 40px;
+
+}
+.side-container{
+    background-color: #383f15;
+    padding: 20px;
+    color:#e0e6a1;
+}
+
+@media screen and (max-width: 567px){
+    .body-container{
+        display:block;
+    }
+    .head-sports{
+    padding-top:30px;
+}
+    .sports-container{
+        grid-template-columns: 1fr;
+    }
+    .side-container{
+        padding:40px 0;
+    }
+}

@@ -1,0 +1,14 @@
+.blog{
+    padding: 40px 200px;
+    text-align: center;
+    color:#e0e6a1;
+}
+.blog h2{
+    margin: 0;
+}
+
+@media screen and (max-width: 567px){
+    .blog{
+        padding: 40px 50px;
+    }
+}

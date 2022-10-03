@@ -1,0 +1,72 @@
+[
+  {
+    "clickTimes":0,
+    "idSport": "102",
+    "strSport": "Soccer",
+    "strFormat": "Team vs Team",
+    "time": 1,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/soccer.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/soccer.png",
+    "strSportDescription": "Association football, more commonly known as football or soccer, is a team sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries and dependencies, making it the world's most popular sport."
+  },
+  {
+    "clickTimes":0,
+    "idSport": "103",
+    "strSport": "Motorsport",
+    "strFormat": "Event Sport",
+    "time": 0.75,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/motorsport.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/motorsport.png",
+    "strSportDescription": "Motorsport or motor sport is a global term used to encompass the group of competitive sporting events which primarily involve the use of motorised vehicles."
+  },
+  {
+    "clickTimes":0,
+    "idSport": "104",
+    "strSport": "Fighting",
+    "strFormat": "Event Sport",
+    "time": 0.5,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/fighting.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/fighting.png",
+    "strSportDescription": "Combat (French for fight) is a purposeful violent conflict meant to weaken, establish dominance over, or kill the opposition, or to drive the opposition away from a location where it is not wanted or needed."
+  },
+  {
+    "clickTimes":0,
+    "idSport": "105",
+    "strSport": "Baseball",
+    "strFormat": "Team vs Team",
+    "time": 3,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/baseball.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/baseball.png",
+    "strSportDescription": "Baseball is a bat-and-ball game played between two teams of nine players each who take turns batting and fielding. "
+  },
+  {
+    "clickTimes":0,
+    "idSport": "106",
+    "strSport": "Basketball",
+    "strFormat": "Team vs Team",
+    "time": 1.5,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/basketball.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/basketball.png",
+    "strSportDescription": "Basketball is a limited-contact sport played on a rectangular court. While most often played as a team sport with five players on each side, three-on-three, two-on-two, and one-on-one competitions are also common."
+  },
+  {
+    "clickTimes":0,
+    "idSport": "113",
+    "strSport": "Cycling",
+    "strFormat": "Event Sport",
+    "time": 1,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/cycling.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/cycling.png",
+    "strSportDescription": "Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport."
+  },
+  {
+    "clickTimes":0,
+    "idSport": "108",
+    "strSport": "Ice Hockey",
+    "strFormat": "Team vs Team",
+    "time": 1,
+    "strSportThumb": "https://www.thesportsdb.com/images/sports/ice_hockey.jpg",
+    "strSportIconGreen": "https://www.thesportsdb.com/images/icons/sports/icehockey.png",
+    "strSportDescription": "Ice hockey is a contact team sport played on ice, usually in a rink, in which two teams of skaters use their sticks to shoot a vulcanized rubber puck into their opponent's net to score points."
+  }
+]
