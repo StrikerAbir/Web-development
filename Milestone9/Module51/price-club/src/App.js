@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './component/NavBar/NavBar';
 import Pricing from './component/Pricing/Pricing';
 import AssignmentMark from './component/AssignmentMark/AssignmentMark';
+import PhoneBar from './component/PhoneBar/PhoneBar';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <p>just a para</p>
       <Pricing></Pricing>
       <AssignmentMark></AssignmentMark>
+      <PhoneBar></PhoneBar>
     </div>
   );
 }
