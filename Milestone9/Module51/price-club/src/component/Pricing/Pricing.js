@@ -8,7 +8,7 @@ const Pricing = () => {
         name: "Free",
         price: 0,
         feature: [
-          "Awesome Freature",
+          "Everything is free",
           "Extra feature",
           "Unnecessary Feature",
           "Will never use Feature",
@@ -21,7 +21,7 @@ const Pricing = () => {
         name: "Medium",
         price: 9.99,
         feature: [
-          "Awesome Freature",
+          "Everything in medium",
           "Extra feature",
           "Unnecessary Feature",
           "Will never use Feature",
@@ -34,7 +34,7 @@ const Pricing = () => {
         name: "Premium",
         price: 19.99,
         feature: [
-          "Awesome Freature",
+          "Every thing on premium",
           "Extra feature",
           "Unnecessary Feature",
           "Will never use Feature",
@@ -48,7 +48,7 @@ const Pricing = () => {
         <h2 className="text-5xl font-bold bg-indigo-300 p-12 text-white">
           Best deal of the town
         </h2>
-        <div className='grid grid-cols-3 gap-3'>
+        <div className='grid md:grid-cols-3 gap-3 mt-4'>
           {pricing.map((option) => (
             <PriceOption key={option.id} option={option}></PriceOption>
           ))}

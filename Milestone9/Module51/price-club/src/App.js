@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <h1 className='text-4xl font-bold'>this is a big big h1</h1>
+      <h1 className='text-4xl font-bold'>This is a big big header</h1>
       <p>just a para</p>
       <Pricing></Pricing>
     </div>
