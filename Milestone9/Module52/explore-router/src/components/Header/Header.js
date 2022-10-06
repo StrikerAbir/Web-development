@@ -4,13 +4,16 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className='header'>
-            <Link to='/home'>HOME</Link>
-            <Link to='/about'>ABOUT</Link>
-            <Link to='/products'>Products</Link>
-            {/* <a href="/home">Home</a>
+      <div className="header">
+        <nav>
+          <Link to="/home">HOME</Link>
+          <Link to="/about">ABOUT</Link>
+          <Link to="/products">Products</Link>
+          {/* <a href="/home">Home</a>
             <a href="/about">About</a> */}
-        </div>
+            </nav>
+            <p>beka dat bane</p>
+      </div>
     );
 };
 
