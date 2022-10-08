@@ -9,20 +9,21 @@ import Main from './Layouts/Main';
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Main></Main>,
       children: [
         {
-          path: '/',
-          element:<Home></Home>
+          path: "/",
+          loader: () => fetch("tshirt.json"),
+          element: <Home></Home>,
         },
         {
-          path: '/orders',
-          element:<Order></Order>
-        }
-      ]
-    }
-  ])
+          path: "/orders",
+          element: <Order></Order>,
+        },
+      ],
+    },
+  ]);
   return (
     <div className='App'>
         <RouterProvider router={router}></RouterProvider>
