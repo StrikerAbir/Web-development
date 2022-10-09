@@ -9,7 +9,7 @@ const Myself = ({house,ring}) => {
           <small>House: {house}</small>
         </p>
         <section>
-          <Tishu ring={ring}></Tishu>
+          <Tishu></Tishu>
         </section>
       </div>
     );
