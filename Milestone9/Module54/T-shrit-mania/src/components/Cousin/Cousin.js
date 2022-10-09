@@ -1,10 +1,17 @@
 import React from 'react';
+import Friend from '../Friend/Friend';
 
-const Cousin = () => {
+const Cousin = ({house}) => {
     return (
-        <div>
-            <h2>Cousin</h2>
-        </div>
+      <div>
+        <h2>Cousin</h2>
+        <p>
+          <small>House: {house}</small>
+        </p>
+        <section>
+          <Friend></Friend>
+        </section>
+      </div>
     );
 };
 

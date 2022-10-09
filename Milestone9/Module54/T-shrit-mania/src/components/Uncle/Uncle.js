@@ -1,14 +1,16 @@
 import React from 'react';
 import Cousin from '../Cousin/Cousin';
 
-const Uncle = () => {
+const Uncle = ({house}) => {
     return (
-        <div>
-            <h1>Uncle</h1> 
-            <section className='flex'>
-                <Cousin></Cousin>
-            </section>
-        </div>
+      <div>
+        <h1>Uncle</h1>
+        <section className="flex">
+          <p>
+            <small>House: {house}</small>
+          </p>
+        </section>
+      </div>
     );
 };
 
