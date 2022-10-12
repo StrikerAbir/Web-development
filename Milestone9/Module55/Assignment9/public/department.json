@@ -1,0 +1,58 @@
+[
+    {
+      "id": "623853b2614ad5aba311fdd1",
+      "index": 0,
+      "price": 1000,
+      "picture": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1676&q=80",
+      "name": "Computer Science",
+      "gender": "Just Chill"
+    },
+    {
+      "id": "623853b2578e9e6ad1ae0dd5",
+      "index": 1,
+      "picture": "https://images.unsplash.com/photo-1581090466619-e945d2e2980e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Mechanical Engineering",
+      "price": 1200,
+      "gender": "Keep Coding"
+    },
+    {
+      "id": "623853b21fb149d2ee7b76c7",
+      "index": 2,
+      "picture": "https://plus.unsplash.com/premium_photo-1661727547850-3d7c020a64a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Electrical Engineering",
+      "price": 1100,
+      "gender": ""
+    },
+    {
+      "id": "623853b2e91c8de578c9245e",
+      "index": 3,
+      "picture": "https://plus.unsplash.com/premium_photo-1661683880413-a9ac4a550f2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
+      "name": "BBA",
+      "price": 500,
+      "gender": "Mix Yellow"
+    },
+    {
+      "id": "623853b2239582e48409ccc6",
+      "index": 4,
+      "price": 1000,
+      "picture": "https://plus.unsplash.com/premium_photo-1661490867606-1ac837f9748e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Civil Engineering",
+      "gender": "male"
+    },
+    {
+      "id": "623853b2cdda0d5bc294f791",
+      "index": 5,
+      "picture": "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Biometric Engineering",
+      "price": 1500,
+      "gender": "male"
+    },
+    {
+      "id": "623853b2736f19fd4eb8d44a",
+      "index": 6,
+      "price": 800,
+      "picture": "https://as01.epimg.net/meristation_en/imagenes/2022/07/17/news/1658069215_091445_1658069428_noticia_normal_recorte1.jpg",
+      "name": "Animation",
+      "gender": "female"
+    }
+  ]
