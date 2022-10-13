@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import {
   getAuth,
+  GithubAuthProvider,
   GoogleAuthProvider,
   signInWithPopup,
   signOut,
@@ -14,9 +15,12 @@ const auth = getAuth(app);
 function App() {
   const [user, setUser] = useState({});
 
-  const provider = new GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
+const githubProvider= new GithubAuthProvider();
+
+  // google sign in and out
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         setUser(user);
@@ -37,19 +41,44 @@ function App() {
         console.error("error", error);
       });
   };
+
+  // github sign in and out
+  const handleGithubSignIn = () => {
+    signInWithPopup(auth, githubProvider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        console.log(user);
+        // console.log(user.photoURL);
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  };
+
+  const handleGithubSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  };
+
   return (
     <div className="App">
-      {user.email ? (<>
+      {user.uid ? (<>
         <button onClick={handleGoogleSignOut}>Google sign out</button>
-        <button onClick={handleGithubSignOut}>Google sign out</button>
+        <button onClick={handleGithubSignOut}>GitHub sign out</button>
       </>
       ) : (<>
         <button onClick={handleGoogleSignIn}>Google sign in</button>
-        <button onClick={handleGithubSignIn}>Google sign in</button>
+        <button onClick={handleGithubSignIn}>GitHub sign in</button>
       </>
       )}
       {/* conditional rendering */}
-      {user.email && (
+      {user.uid && (
         <div>
           <h3>User Name: {user.displayName}</h3>
           <p>Email: {user.email}</p>
