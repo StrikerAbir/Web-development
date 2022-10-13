@@ -39,10 +39,14 @@ function App() {
   };
   return (
     <div className="App">
-      {user.email ? (
+      {user.email ? (<>
         <button onClick={handleGoogleSignOut}>Google sign out</button>
-      ) : (
+        <button onClick={handleGithubSignOut}>Google sign out</button>
+      </>
+      ) : (<>
         <button onClick={handleGoogleSignIn}>Google sign in</button>
+        <button onClick={handleGithubSignIn}>Google sign in</button>
+      </>
       )}
       {/* conditional rendering */}
       {user.email && (
