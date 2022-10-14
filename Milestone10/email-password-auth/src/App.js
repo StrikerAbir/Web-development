@@ -2,6 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import app from "./firebase/firebase.init";
 import { getAuth } from "firebase/auth";
+import Register from "./components/Register/Register";
+import RegisterReactBootstrap from "./components/RegisterReactBootstrap/RegisterReactBootstrap";
+import RegisterBootstrap from "./components/RegisterBootstrap/RegisterBootstrap";
 
 const auth = getAuth(app);
 
@@ -23,28 +26,10 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <form action="" onSubmit={handleRegister}>
-        <input
-          // onChange={handleEmailChange}
-          onBlur={handleEmailChange}
-          type="email"
-          name="email"
-          id=""
-          placeholder="Email"
-        />
-        <br />
-        <input
-          // onChange={handlePasswordChange}
-          onBlur={handlePasswordChange}
-          type="password"
-          name="password"
-          id=""
-          placeholder="Password"
-        />
-        <br />
-        <button type="submit">Register</button>
-      </form>
+    <div className="">
+      {/* <Register></Register> */}
+      <RegisterReactBootstrap></RegisterReactBootstrap>
+      <RegisterBootstrap></RegisterBootstrap>
     </div>
   );
 }
