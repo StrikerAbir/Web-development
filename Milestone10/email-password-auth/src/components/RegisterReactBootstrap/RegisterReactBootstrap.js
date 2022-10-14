@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import app from '../../firebase/firebase.init';
 import { Link } from 'react-router-dom';
 
@@ -37,11 +37,19 @@ const RegisterReactBootstrap = () => {
                 console.log(user);
                 setSuccess(true);
                 form.reset();
+                verifyEmail();
             })
             .catch((err) => {
                 console.error("error", err);
                 setPassErr(err.message)
             });
+    }
+
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => { 
+            alert('Please check your email. and verify your email. If not in inbox check on spam folder.')
+        })
     }
     return (
       <div className="w-50 mx-auto">
@@ -74,7 +82,7 @@ const RegisterReactBootstrap = () => {
         </Form>
         <p>
           <small>
-            Already have account? Please <Link to="/login">Register</Link>
+            Already have account? Please <Link to="/login">Login</Link>
           </small>
         </p>
       </div>
