@@ -5,31 +5,42 @@ import { getAuth } from "firebase/auth";
 import Register from "./components/Register/Register";
 import RegisterReactBootstrap from "./components/RegisterReactBootstrap/RegisterReactBootstrap";
 import RegisterBootstrap from "./components/RegisterBootstrap/RegisterBootstrap";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./Layout/Main";
+import LoginBootstrap from "./components/LoginBootstrap/LoginBootstrap";
 
 const auth = getAuth(app);
 
-function App() {
-  // easy way
-  const handleRegister = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    console.log(email, password);
-  };
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <RegisterReactBootstrap></RegisterReactBootstrap>,
+      },
+      {
+        path: "/register",
+        element: <RegisterReactBootstrap></RegisterReactBootstrap>,
+      },
+      {
+        path: "/login",
+        element: <LoginBootstrap></LoginBootstrap>
+      },
+    ],
+  },
+]);
 
-  // another way with react handler
-  const handleEmailChange = (event) => {
-    console.log(event.target.value);
-  };
-  const handlePasswordChange = (event) => {
-    console.log(event.target.value);
-  };
+function App() {
+ 
 
   return (
     <div className="">
+      <RouterProvider router={router}></RouterProvider>
       {/* <Register></Register> */}
-      <RegisterReactBootstrap></RegisterReactBootstrap>
-      <RegisterBootstrap></RegisterBootstrap>
+      {/* <RegisterReactBootstrap></RegisterReactBootstrap> */}
+      {/* <RegisterBootstrap></RegisterBootstrap> */}
     </div>
   );
 }
