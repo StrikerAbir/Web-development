@@ -1,12 +1,17 @@
-import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import app from "../../firebase/firebase.init";
 
 const auth = getAuth(app);
 const LoginBootstrap = () => {
-    const [success, setSuccess] = useState(false);
-    
+  const [success, setSuccess] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSuccess(false);
@@ -17,17 +22,31 @@ const LoginBootstrap = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
-          console.log(user);
-          setSuccess(true)
+        console.log(user);
+        setSuccess(true);
       })
       .catch((err) => {
         console.error("error", err);
       });
   };
+  const handleEmailBlur = (event) => {
+    const email = event.target.value;
+    setUserEmail(email);
+  };
 
-    const handleForgetPassword = () => {
-        sendPasswordResetEmail(auth)
+  const handleForgetPassword = () => {
+    if (!userEmail) {
+      alert("Please enter email first");
+      return;
     }
+    sendPasswordResetEmail(auth, userEmail)
+      .then(() => {
+        alert("Password reset email sent. Please check yout email");
+      })
+      .catch((err) => {
+        console.error("error", err);
+      });
+  };
 
   return (
     <div className="w-50 mx-auto">
@@ -43,6 +62,7 @@ const LoginBootstrap = () => {
             className="form-control"
             id="formGroupExampleInput"
             placeholder="Email"
+            onBlur={handleEmailBlur}
             required
           />
         </div>
@@ -62,14 +82,23 @@ const LoginBootstrap = () => {
         <button className="btn btn-primary" type="submit">
           Login
         </button>
-          </form>
-          {success&&<p className='text-success'>Successfully loged in.</p>}
+      </form>
+      {success && <p className="text-success">Successfully loged in.</p>}
       <p>
         <small>
           New to website? Please <Link to="/register">Register</Link>
         </small>
-          </p>
-          <p>Forget Password? <button onClick={handleForgetPassword} type='button' className='btn btn-link'>Rest Password</button></p>
+      </p>
+      <p>
+        Forget Password?{" "}
+        <button
+          onClick={handleForgetPassword}
+          type="button"
+          className="btn btn-link"
+        >
+          Rest Password
+        </button>
+      </p>
     </div>
   );
 };
