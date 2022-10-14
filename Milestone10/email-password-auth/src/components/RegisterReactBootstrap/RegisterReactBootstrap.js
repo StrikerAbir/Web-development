@@ -7,11 +7,15 @@ import app from '../../firebase/firebase.init';
 const auth = getAuth(app);
 const RegisterReactBootstrap = () => {
 
-    const [passErr,setPassErr]=useState('')
+    const [passErr, setPassErr] = useState('');
+    const [success, setSuccess] = useState(false);
+    
     const handleRegister = (event) => {
+        const form = event.target;
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        setSuccess(false);
+        const email = form.email.value;
+        const password = form.password.value;
 
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
             setPassErr('Please provide at least two uppercase');
@@ -29,10 +33,13 @@ const RegisterReactBootstrap = () => {
           createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
               const user = result.user;
-              console.log(user);
+                console.log(user);
+                setSuccess(true);
+                form.reset();
             })
             .catch((err) => {
-              console.error("error", err);
+                console.error("error", err);
+                setPassErr(err.message)
             });
     }
     return (
@@ -48,7 +55,8 @@ const RegisterReactBootstrap = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" name='password' required/>
                 </Form.Group>
-                <p className='text-danger'>{ passErr}</p>
+                <p className='text-danger'>{passErr}</p>
+                {success&& <p className='text-success'>Successfully Registered</p>}
           <Button variant="primary" type="submit">
             Register
           </Button>
