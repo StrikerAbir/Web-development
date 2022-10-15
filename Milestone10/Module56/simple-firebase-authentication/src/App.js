@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import {
+  FacebookAuthProvider,
   getAuth,
   GithubAuthProvider,
   GoogleAuthProvider,
@@ -17,6 +18,7 @@ function App() {
 
   const googleProvider = new GoogleAuthProvider();
 const githubProvider= new GithubAuthProvider();
+const faceBookProvider= new FacebookAuthProvider();
 
   // google sign in and out
   const handleGoogleSignIn = () => {
@@ -65,17 +67,44 @@ const githubProvider= new GithubAuthProvider();
         console.error("error", error);
       });
   };
+  // github sign in and out
+  const handleFBbSignIn = () => {
+    signInWithPopup(auth, faceBookProvider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        console.log(user);
+        // console.log(user.photoURL);
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  };
+
+  const handleFBSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  };
 
   return (
     <div className="App">
-      {user.uid ? (<>
-        <button onClick={handleGoogleSignOut}>Google sign out</button>
-        <button onClick={handleGithubSignOut}>GitHub sign out</button>
-      </>
-      ) : (<>
-        <button onClick={handleGoogleSignIn}>Google sign in</button>
-        <button onClick={handleGithubSignIn}>GitHub sign in</button>
-      </>
+      {user.uid ? (
+        <>
+          <button onClick={handleGoogleSignOut}>Google sign out</button>
+          <button onClick={handleGithubSignOut}>GitHub sign out</button>
+          <button onClick={handleFBSignOut}>FaceBook sign out</button>
+        </>
+      ) : (
+        <>
+          <button onClick={handleGoogleSignIn}>Google sign in</button>
+          <button onClick={handleGithubSignIn}>GitHub sign in</button>
+          <button onClick={handleFBbSignIn}>FaceBook sign in</button>
+        </>
       )}
       {/* conditional rendering */}
       {user.uid && (
