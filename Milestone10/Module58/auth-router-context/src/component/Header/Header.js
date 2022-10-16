@@ -7,13 +7,21 @@ const Header = () => {
   console.log(user);
   return (
     <div>
-      
       <div className="navbar bg-primary text-primary-content">
-              <Link className="btn btn-ghost normal-case text-xl" to='/'>AUTH</Link>
-              <Link className="btn btn-ghost normal-case text-xl" to='/'>Home</Link>
-              <Link className="btn btn-ghost normal-case text-xl" to='/login'>Log in</Link>
-        <Link className="btn btn-ghost normal-case text-xl" to='/register'>Register</Link>
-        {user && <span>Welcome { user.displayName }</span>}
+        <Link className="btn btn-ghost normal-case text-xl" to="/">
+          AUTH
+        </Link>
+        <Link className="btn btn-ghost normal-case text-xl" to="/">
+          Home
+        </Link>
+        <Link className="btn btn-ghost normal-case text-xl" to="/login">
+          Log in
+        </Link>
+        <Link className="btn btn-ghost normal-case text-xl" to="/register">
+          Register
+        </Link>
+        {user?.email && <span>Welcome {user.email}</span>}
+        <button className="btn btn-sm">Sign out</button>
       </div>
     </div>
   );
