@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/UserContext";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <div>
       
@@ -9,7 +12,8 @@ const Header = () => {
               <Link className="btn btn-ghost normal-case text-xl" to='/'>AUTH</Link>
               <Link className="btn btn-ghost normal-case text-xl" to='/'>Home</Link>
               <Link className="btn btn-ghost normal-case text-xl" to='/login'>Log in</Link>
-              <Link className="btn btn-ghost normal-case text-xl" to='/register'>Register</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to='/register'>Register</Link>
+        {user && <span>Welcome { user.displayName }</span>}
       </div>
     </div>
   );
