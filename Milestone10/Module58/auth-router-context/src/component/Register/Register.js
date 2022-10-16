@@ -4,7 +4,7 @@ import { AuthContext } from '../../context/UserContext';
 
 const Register = () => {
 
-  const { createUser } = useContext(AuthContext)
+  const { createUser, signInWithGoogle } = useContext(AuthContext);
   
       const handleSubmit = (event) => {
         event.preventDefault();
@@ -20,7 +20,16 @@ const Register = () => {
         }).catch(error => {
           console.error(error);
         })
-      };
+  };
+  const handleGoogleSignIn = () => {
+    signInWithGoogle().then(result => {
+      const user = result.user;
+      console.log(user);
+    }).catch(error => {
+     console.error('error',error);
+   })
+ }
+
     return (
       <div>
         <div className="hero min-h-screen bg-base-200">
@@ -66,7 +75,10 @@ const Register = () => {
                     required
                   />
                   <label className="label">
-                    <Link to="/login" className="label-text-alt link link-hover">
+                    <Link
+                      to="/login"
+                      className="label-text-alt link link-hover"
+                    >
                       Already have an account?
                     </Link>
                   </label>
@@ -75,6 +87,7 @@ const Register = () => {
                   <button className="btn btn-primary">Register</button>
                 </div>
               </form>
+              <button onClick={handleGoogleSignIn} className="btn btn-info">Google</button>
             </div>
           </div>
         </div>

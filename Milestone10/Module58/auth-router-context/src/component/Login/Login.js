@@ -3,7 +3,7 @@ import { AuthContext } from "../../context/UserContext";
 
 const Login = () => {
 
-  const {signIn}=useContext(AuthContext)
+  const {signIn,signInWithGoogle}=useContext(AuthContext)
   const handleSubmit = (event) => {
       event.preventDefault();
       const form = event.target;
@@ -19,6 +19,17 @@ const Login = () => {
         console.error(error);
       });
   };
+
+   const handleGoogleSignIn = () => {
+     signInWithGoogle()
+       .then((result) => {
+         const user = result.user;
+         console.log(user);
+       })
+       .catch((error) => {
+         console.error("error", error);
+       });
+   };
 
   return (
     <div>
@@ -62,6 +73,9 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
+            <button onClick={handleGoogleSignIn} className="btn btn-info">
+              Google
+            </button>
           </div>
         </div>
       </div>
