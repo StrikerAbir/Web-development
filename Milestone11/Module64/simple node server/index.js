@@ -17,11 +17,19 @@ const users = [
 ]
 
 app.get("/users", (req, res) => {
-  res.send(users);
+    if (req.query.name) {
+        // filter by query
+        const search= req.query.name
+        const filtered = users.filter(user => user.name.toLowerCase().indexOf(search)>=0)
+        res.send(filtered);
+    } else {
+        
+        res.send(users);
+    }
 });
 
 app.post('/users', (req, res) => {
-    console.log('post api called');
+    console.log('user post api called');
     const user = req.body;
     user.id = users.length + 1;
     users.push(user);
