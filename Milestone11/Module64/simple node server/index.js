@@ -24,6 +24,13 @@ async function run() {
     // const user = { name: "mihit", email: "12@gmail.com" };
     // const result = await userCollection.insertOne(user);
     // console.log(result);
+      
+      app.get('/users', async(req, res) => {
+          const cursor = userCollection.find({});
+          const users = await cursor.toArray();
+          res.send(users);
+      })
+      
       app.post("/users", async (req, res) => {
         console.log("user post api called");
         const user = req.body;
@@ -31,7 +38,7 @@ async function run() {
         // users.push(user);
           const result = await userCollection.insertOne(user);
           console.log(result);
-          user.id = result.insertedId;
+          user._id = result.insertedId;
         res.send(user);
       });
   } finally {
@@ -51,24 +58,24 @@ app.get("/", (req, res) => {
   res.send("simple node server running");
 });
 
-const users = [
-  { id: 1, name: "hinata", email: "hinataWifu@gmail.com" },
-  { id: 1, name: "zero2", email: "zero2Wifu@gmail.com" },
-  { id: 1, name: "hancock", email: "hancockWifu@gmail.com" },
-];
+// const users = [
+//   { id: 1, name: "hinata", email: "hinataWifu@gmail.com" },
+//   { id: 1, name: "zero2", email: "zero2Wifu@gmail.com" },
+//   { id: 1, name: "hancock", email: "hancockWifu@gmail.com" },
+// ];
 
-app.get("/users", (req, res) => {
-  if (req.query.name) {
-    // filter by query
-    const search = req.query.name;
-    const filtered = users.filter(
-      (user) => user.name.toLowerCase().indexOf(search) >= 0
-    );
-    res.send(filtered);
-  } else {
-    res.send(users);
-  }
-});
+// app.get("/users", (req, res) => {
+//   if (req.query.name) {
+//     // filter by query
+//     const search = req.query.name;
+//     const filtered = users.filter(
+//       (user) => user.name.toLowerCase().indexOf(search) >= 0
+//     );
+//     res.send(filtered);
+//   } else {
+//     res.send(users);
+//   }
+// });
 
 // app.post("/users", (req, res) => {
 //   console.log("user post api called");

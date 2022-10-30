@@ -45,7 +45,7 @@ function App() {
       <h2>user {users.length}</h2>
       <div>
         {users.map((user) => (
-          <p>{user.name}</p>
+          <p key={user._id}>{user.name}</p>
         ))}
       </div>
     </div>
