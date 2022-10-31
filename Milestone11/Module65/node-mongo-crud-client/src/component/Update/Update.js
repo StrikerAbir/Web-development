@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Update = () => {
     const storedUser = useLoaderData();
@@ -7,7 +7,21 @@ const Update = () => {
     const [user, setUser] = useState(storedUser);
     const handleUpdateUser = (event) => {
       event.preventDefault();
-      console.log(user);
+        console.log(user);
+        fetch(`http://localhost:1000/user/${storedUser._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then((response) => response.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    alert('User Update')
+                }
+                console.log(data)
+            });
       
     };
     const handleInputChange = (event) => {
@@ -19,6 +33,10 @@ const Update = () => {
     };
     return (
       <div>
+        <div>
+          <Link to="/">Home</Link>
+          <br /> <Link to="/user/add">Add user</Link>
+        </div>
         <h2>please update : {storedUser.name}</h2>
         <form onSubmit={handleUpdateUser}>
           <input
