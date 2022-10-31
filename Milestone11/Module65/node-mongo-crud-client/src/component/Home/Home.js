@@ -27,13 +27,17 @@ const Home = () => {
       <div>
         <div>
           <Link to="/">Home</Link>
-         <br /> <Link to="/user/add">Add user</Link>
+          <br /> <Link to="/user/add">Add user</Link>
         </div>
         <h2>USers : {displayUsers.length}</h2>
         <div>
           {displayUsers.map((user) => (
             <p key={user._id}>
-              {user.name} {user.email} <button onClick={()=>handleDelete(user)}>X</button>
+              {user.name} {user.email}
+              <Link to={`/update/${user._id}`}>
+                <button>Update</button>
+              </Link>
+              <button onClick={() => handleDelete(user)}>X</button>
             </p>
           ))}
         </div>
