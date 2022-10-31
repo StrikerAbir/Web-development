@@ -6,16 +6,16 @@ import AddUser from './component/AddUser/AddUser';
 
 function App() {
   const router = createBrowserRouter([
-    { 
-      path: '/',
-      element: <Home></Home>
-
+    {
+      path: "/",
+      element: <Home></Home>,
+      loader: () => fetch("http://localhost:1000/users"),
     },
     {
-      path: '/user/add',
-      element:<AddUser></AddUser>
-    }
-  ])
+      path: "/user/add",
+      element: <AddUser></AddUser>,
+    },
+  ]);
   return (
     <div className="App">
      <RouterProvider router={router}></RouterProvider>
