@@ -7,9 +7,11 @@ function App() {
   const initialState = 0;
   const reducer = (state,action) => {
     if (action.type === "INCREMENT") {
-      return state + 1;
+      // return state + 1;
+      return state + action.payload.count;
     } else if (action.type === "DECREMENT") {
-      return state - 1;
+      // return state - 1;
+      return state - action.payload.count;
     }
   }
   const [state,dispatch]=useReducer(reducer,initialState)
@@ -17,12 +19,14 @@ function App() {
     <div>
       <div>
         <p>{state}</p>
-        <button onClick={() => dispatch({ type: "DECREMENT" })}>
+        <button
+          onClick={() => dispatch({ type: "DECREMENT", payload: { count: 5 } })}
+        >
           {" "}
           decrement
         </button>
         <button
-          onClick={() => dispatch({ type: "INCREMENT" })}
+          onClick={() => dispatch({ type: "INCREMENT", payload: { count: 5 } })}
           className="ml-4"
         >
           {" "}
